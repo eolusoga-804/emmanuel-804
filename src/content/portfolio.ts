@@ -1,0 +1,353 @@
+import type { PortfolioContent } from "@/types/portfolio";
+
+export const portfolioContent = {
+  identity: {
+    fullName: "Emmanuel Olusoga Akinola",
+    displayName: "Emmanuel#804",
+    primaryTitle: "Frontend Developer",
+    titles: [
+      "Frontend Developer",
+      "React.js Developer",
+      "UI/UX Designer",
+      "Graphic Designer",
+    ],
+    location: "Lagos, Nigeria",
+    availability: ["Freelance", "Remote", "Contract", "Full-time"],
+  },
+
+  summary:
+    "Creative and detail-oriented Frontend Developer, React.js Developer, UI/UX Designer, and Graphic Designer with a multidisciplinary background in software engineering, responsive web development, UI/UX, branding, and visual communication. Experienced in creating responsive and interactive digital experiences with HTML, CSS, JavaScript, and React, while applying design principles such as typography, spacing, hierarchy, composition, color, usability, and consistency. Brings analytical thinking from Industrial Mathematics together with practical software engineering and graphic design experience.",
+
+  objective:
+    "To build a progressive career in frontend and React.js development while leveraging graphic design and UI/UX skills to create responsive, accessible, scalable, and visually refined digital experiences.",
+
+  mission:
+    "Create modern, accessible, user-focused digital experiences that help businesses communicate effectively and achieve their goals.",
+
+  vision:
+    "Become a trusted software and design professional recognized for impactful digital products and meaningful client relationships.",
+
+  values: [
+    "Integrity",
+    "Excellence",
+    "Creativity",
+    "Collaboration",
+    "Learning",
+    "Reliability",
+  ],
+
+  contact: {
+    email: "eolusoga2@gmail.com",
+    phone: "+2349124416909",
+    whatsappNumber: "+2349074395764",
+    whatsappUrl: "https://wa.me/2349074395764",
+    links: [
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/emmanuel-olusoga",
+      },
+      {
+        label: "X",
+        href: "https://x.com/eolusoga2",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/eolusoga-804",
+      },
+      {
+        label: "Portfolio",
+        href: null,
+      },
+    ],
+  },
+
+  resumePath: "/files/emmanuel-olusoga-akinola-resume.pdf",
+
+  aboutSlides: [
+    {
+      title: "Professional Summary",
+      body: "A multidisciplinary professional working across frontend development, React, UI/UX design, and graphic design.",
+    },
+    {
+      title: "Career Objective",
+      body: "Build responsive, accessible, and visually refined digital experiences by combining frontend development with design skills.",
+    },
+    {
+      title: "Mission and Vision",
+      body: "Create user-focused digital experiences and grow into a trusted software and design professional.",
+    },
+    {
+      title: "Background",
+      body: "Combines Industrial Mathematics, software engineering education, and practical graphic design experience.",
+    },
+  ],
+
+  experience: [
+    {
+      period: "October 2020 – December 2025",
+      title: "Graphic Design Intern / Junior Graphic Designer",
+      organization: "Yumarib Concept — Shomolu, Lagos, Nigeria",
+      description:
+        "Designed digital and print marketing materials, social media graphics, branding assets, and web graphics. Collaborated with senior designers, incorporated feedback, and managed assignments to deadlines.",
+    },
+  ],
+
+  education: [
+    {
+      period: "October 2019 – September 2025",
+      title: "B.Sc. Industrial Mathematics",
+      organization: "University of Lagos (UNILAG), Akoka, Lagos",
+      description:
+        "Applied & Computational Mathematics Option; Second Class Lower Division.",
+    },
+    {
+      period: "June 2020 – December 2023",
+      title: "Advanced Diploma in Software Engineering (ADSE)",
+      organization: "Aptech Computer Education, Lagos",
+      description: "Completed with Distinction.",
+    },
+  ],
+
+  certificates: [
+    "Advanced Diploma in Software Engineering (Distinction) — Aptech Computer Education",
+    "Graphic Designing with Adobe Graphic Design Software(s) — Yumarib Concept",
+    "B.Sc. Industrial Mathematics — Applied & Computational Mathematics Option, Second Class Lower Division",
+  ],
+
+  languages: ["English — Professional/Fluent", "Yoruba — Professional/Fluent"],
+
+  // Keep exactly three groups to match the planned Skills section.
+  skillsMarquees: [
+    {
+      title: "Frontend Development",
+      items: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React.js",
+        "TypeScript",
+        "Vue.js",
+        "Next.js",
+        "Angular",
+        "jQuery",
+        "REST APIs",
+        "Bootstrap",
+        "Tailwind CSS",
+        "Sass",
+      ],
+    },
+    {
+      title: "Design",
+      items: [
+        "UI/UX Design",
+        "Wireframing",
+        "Prototyping",
+        "Figma",
+        "Adobe Photoshop",
+        "CorelDRAW",
+        "Canva",
+        "Brand Identity",
+        "Typography",
+        "Color Theory",
+        "Visual Hierarchy",
+      ],
+    },
+    {
+      title: "Tools and Foundations",
+      items: [
+        "Python",
+        "Node.js",
+        "Git",
+        "GitHub",
+        "Netlify",
+        "Vercel",
+        "Visual Studio Code",
+        "Responsive Design",
+        "Accessibility Awareness",
+        "Web Performance",
+      ],
+    },
+  ],
+
+  services: [
+    {
+      title: "Responsive Website Development",
+      description:
+        "Create mobile-first website layouts that adapt across phones, tablets, and desktop screens.",
+    },
+    {
+      title: "Frontend Development",
+      description:
+        "Build interactive interfaces with semantic structure and reusable, component-based UI.",
+    },
+    {
+      title: "UI/UX Design",
+      description:
+        "Plan user flows, wireframes, and interface layouts with clear hierarchy and usability in mind.",
+    },
+    {
+      title: "Landing Page Design",
+      description:
+        "Organize page content and visual hierarchy around a clear audience and business goal.",
+    },
+    {
+      title: "Brand Identity Design",
+      description:
+        "Develop logo, color, and visual identity materials to support consistent brand presentation.",
+    },
+    {
+      title: "Graphic Design",
+      description:
+        "Create digital and print materials using typography, color, layout, and composition.",
+    },
+  ],
+
+  projects: [
+    {
+      title: "VS4 Autos",
+      summary: "Mobile mechanic service based in the UK.",
+      favorite: true,
+      verificationNeeded: true,
+      technologies: [],
+      caseStudyUrl: null,
+      liveUrl: null,
+      githubUrl: null,
+    },
+    {
+      title: "SecureFlow Hosting",
+      summary: "Web hosting company website concept.",
+      favorite: false,
+      verificationNeeded: true,
+      technologies: [],
+      caseStudyUrl: null,
+      liveUrl: null,
+      githubUrl: null,
+    },
+    {
+      title: "MyForecast",
+      summary: "Weather and information interface concept.",
+      favorite: false,
+      verificationNeeded: true,
+      technologies: [],
+      caseStudyUrl: null,
+      liveUrl: null,
+      githubUrl: null,
+    },
+  ],
+
+  strengths: [
+    "Creative problem solving",
+    "Analytical and critical thinking",
+    "Attention to detail",
+    "User-centered mindset",
+    "Effective communication",
+    "Adaptability and continuous learning",
+  ],
+
+  philosophy: [
+    {
+      title: "People and purpose first",
+      description:
+        "Understand the audience, information needs, goals, and constraints before choosing a structure or visual direction.",
+    },
+    {
+      title: "Clarity in visual design",
+      description:
+        "Use typography, spacing, contrast, alignment, and hierarchy to make information easier to understand.",
+    },
+    {
+      title: "Responsive and accessible by default",
+      description:
+        "Consider different screen sizes, semantic structure, readable content, and keyboard access throughout the work.",
+    },
+    {
+      title: "Maintainable implementation",
+      description:
+        "Use organized styles, reusable components, and understandable code to make products easier to extend.",
+    },
+    {
+      title: "Performance and quality",
+      description:
+        "Consider browser behavior, accessibility, performance, and edge cases during development and review.",
+    },
+  ],
+
+  workflow: [
+    {
+      number: "01",
+      title: "Discover",
+      description:
+        "Understand requirements, users, constraints, content, goals, and success criteria.",
+    },
+    {
+      number: "02",
+      title: "Plan",
+      description:
+        "Organize content, navigation, user journeys, wireframes, and responsive states.",
+    },
+    {
+      number: "03",
+      title: "Design",
+      description:
+        "Develop hierarchy through typography, spacing, color, components, and consistent design rules.",
+    },
+    {
+      number: "04",
+      title: "Build",
+      description:
+        "Translate designs into responsive interfaces with semantic structure and maintainable patterns.",
+    },
+    {
+      number: "05",
+      title: "Validate",
+      description:
+        "Review device and browser behavior, keyboard interaction, accessibility, and performance.",
+    },
+    {
+      number: "06",
+      title: "Improve",
+      description:
+        "Review the finished product, incorporate feedback, deploy, and plan future improvements.",
+    },
+  ],
+
+  careerTimeline: [
+    {
+      period: "October 2020 – December 2025",
+      title: "Graphic Design Intern / Junior Graphic Designer",
+      organization: "Yumarib Concept",
+      description:
+        "Worked across branding, promotional materials, social media graphics, and web assets.",
+    },
+    {
+      period: "June 2020 – December 2023",
+      title: "Advanced Diploma in Software Engineering",
+      organization: "Aptech Computer Education",
+      description: "Completed the program with Distinction.",
+    },
+    {
+      period: "October 2019 – September 2025",
+      title: "B.Sc. Industrial Mathematics",
+      organization: "University of Lagos",
+      description:
+        "Studied Applied & Computational Mathematics; Second Class Lower Division.",
+    },
+  ],
+
+  // No approved testimonial copy or author photos were supplied.
+  testimonials: [],
+
+  // The source does not provide portfolio statistics.
+  statistics: [],
+
+  // Add answers only when they can be supported by supplied information.
+  faqs: [],
+
+  seo: {
+    title: "Emmanuel Olusoga Akinola | Frontend Developer",
+    description:
+      "Portfolio of Emmanuel Olusoga Akinola, a frontend developer with experience in React, UI/UX design, and graphic design.",
+    canonicalUrl: null,
+    openGraphImage: null,
+  },
+} satisfies PortfolioContent;
