@@ -1,0 +1,19 @@
+.home-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.home-page__content {
+  width: min(100%, 48rem);
+  text-align: center;
+}
+
+.home-page__title {
+  margin: 0;
+}
+
+.home-page__status {
+  margin: 0.75rem 0 0;
+}
