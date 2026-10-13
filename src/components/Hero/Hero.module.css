@@ -1,0 +1,201 @@
+.hero {
+  display: grid;
+  min-height: calc(100svh - 4rem);
+  align-content: center;
+  justify-items: center;
+  padding: 7.5rem 1.25rem 5rem;
+}
+
+.hero__content {
+  width: min(100%, 54rem);
+  text-align: center;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 1rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  background: var(--surface-background);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  backdrop-filter: blur(14px);
+}
+
+.hero__availability-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--color-success);
+  box-shadow: 0 0 0.8rem var(--color-success);
+}
+
+.hero__title {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(2.3rem, 6.5vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.hero__role {
+  min-height: 2.5rem;
+  margin: 1rem 0 0;
+  color: var(--color-secondary);
+  font-family: var(--font-poppins), Arial, sans-serif;
+  font-size: clamp(1.15rem, 3vw, 1.8rem);
+  font-weight: 600;
+}
+
+.hero__role-label {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.hero__caret {
+  display: inline-block;
+  margin-left: 0.12rem;
+  color: var(--color-accent);
+  animation: hero-caret-blink 800ms steps(2, start) infinite;
+}
+
+.hero__summary {
+  max-width: 48rem;
+  margin: 1.25rem auto 0;
+  color: var(--text-muted);
+  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
+  line-height: 1.75;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+}
+
+.hero__button--primary,
+.hero__button--secondary {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 18rem;
+  min-height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.15rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.hero__button--primary {
+  border-color: transparent;
+  background: var(--color-secondary);
+  color: #fff;
+  box-shadow: 0 8px 24px var(--ambient-glow);
+}
+
+.hero__button--secondary {
+  background: var(--surface-background);
+  color: var(--text-primary);
+  backdrop-filter: blur(14px);
+}
+
+.hero__button--primary:hover,
+.hero__button--secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glass-shadow);
+}
+
+.hero__cv-action {
+  position: relative;
+}
+
+.hero__cv-preview {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  width: min(25rem, 80vw);
+  height: 32rem;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  background: var(--surface-raised);
+  box-shadow: var(--glass-shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 0.5rem);
+  visibility: hidden;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 180ms ease;
+}
+
+.hero__cv-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (hover: hover) and (min-width: 900px) {
+  .hero__cv-action:hover .hero__cv-preview,
+  .hero__cv-action:focus-within .hero__cv-preview {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    visibility: visible;
+  }
+}
+
+@keyframes hero-caret-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding-top: 7rem;
+  }
+
+  .hero__actions {
+    gap: 0.65rem;
+  }
+
+  .hero__button--primary,
+  .hero__button--secondary {
+    padding-inline: 0.9rem;
+    font-size: 0.86rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__caret {
+    animation: none;
+  }
+
+  .hero__cv-preview {
+    transition: none;
+  }
+
+  .hero__button--primary,
+  .hero__button--secondary {
+    transition: none;
+  }
+}
