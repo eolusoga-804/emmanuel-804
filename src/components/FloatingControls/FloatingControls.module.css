@@ -1,0 +1,76 @@
+.floating-controls {
+  position: fixed;
+  z-index: 25;
+  right: clamp(0.75rem, 2vw, 1.5rem);
+  bottom: clamp(0.75rem, 2vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.floating-controls__button {
+  display: grid;
+  place-items: center;
+  width: 3.1rem;
+  height: 3.1rem;
+  padding: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  background: var(--surface-background);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(18px);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    opacity 160ms ease;
+}
+
+.floating-controls__button:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.04);
+}
+
+.floating-controls__button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.floating-controls__whatsapp {
+  border-color: rgb(255 255 255 / 32%);
+  background: #168b50;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.floating-controls__whatsapp:hover {
+  background: #117541;
+}
+
+.floating-controls__progress {
+  border: 0;
+  background: conic-gradient(
+    var(--color-accent) var(--scroll-progress),
+    var(--border-subtle) 0
+  );
+}
+
+.floating-controls__progress span {
+  display: grid;
+  place-items: center;
+  width: 2.55rem;
+  height: 2.55rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  background: var(--surface-raised);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-controls__button {
+    transition: none;
+  }
+}

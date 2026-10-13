@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import BackgroundEffects from "@/components/BackgroundEffects/BackgroundEffects";
+import FloatingControls from "@/components/FloatingControls/FloatingControls";
+import SiteNavigation from "@/components/SiteNavigation/SiteNavigation";
 import "./globals.css";
 
 const inter = Inter({
@@ -29,7 +31,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <div className="site-shell">
           <BackgroundEffects />
-          <div className="site-shell__content">{children}</div>
+          <div className="site-shell__content">
+            <SiteNavigation />
+            {children}
+            <FloatingControls />
+          </div>
         </div>
       </body>
     </html>
