@@ -43,8 +43,6 @@
   border-color: rgb(255 255 255 / 32%);
   background: #168b50;
   color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 700;
 }
 
 .floating-controls__whatsapp:hover {
@@ -67,6 +65,17 @@
   border: 1px solid var(--border-subtle);
   border-radius: 50%;
   background: var(--surface-raised);
+}
+
+.floating-controls__button svg {
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.floating-controls__whatsapp svg {
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 @media (prefers-reduced-motion: reduce) {

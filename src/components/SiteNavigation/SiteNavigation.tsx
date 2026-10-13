@@ -79,7 +79,7 @@ export default function SiteNavigation() {
             href="#home"
             onClick={closePanel}
           >
-            Emmanuel#804
+            {portfolioContent.identity.displayName.toUpperCase()}
           </a>
 
           <nav

@@ -2,6 +2,9 @@
 
 import { useEffect, useState, type CSSProperties } from "react";
 import { portfolioContent } from "@/content/portfolio";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import styles from "./FloatingControls.module.css";
 
 type Theme = "light" | "dark";
@@ -82,7 +85,10 @@ export default function FloatingControls() {
         aria-pressed={theme === "dark"}
         onClick={toggleTheme}
       >
-        <span aria-hidden="true">{theme === "light" ? "☾" : "☀"}</span>
+        <FontAwesomeIcon
+          icon={theme === "light" ? faMoon : faSun}
+          aria-hidden="true"
+        />
       </button>
 
       <a
@@ -92,7 +98,7 @@ export default function FloatingControls() {
         rel="noopener noreferrer"
         aria-label="Contact Emmanuel on WhatsApp"
       >
-        <span aria-hidden="true">WA</span>
+        <FontAwesomeIcon icon={faWhatsapp} aria-hidden="true" />
       </a>
 
       <button
