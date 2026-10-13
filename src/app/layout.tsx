@@ -34,8 +34,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div className="site-shell__content">
             <SiteNavigation />
             {children}
-            <FloatingControls />
           </div>
+          <FloatingControls />
         </div>
       </body>
     </html>

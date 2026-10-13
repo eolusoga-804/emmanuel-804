@@ -60,6 +60,7 @@ export type PortfolioContent = {
     availability: string[];
   };
   summary: string;
+  heroSummary: string;
   objective: string;
   mission: string;
   vision: string;

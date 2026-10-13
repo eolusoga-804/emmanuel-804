@@ -122,44 +122,83 @@
   box-shadow: var(--glass-shadow);
 }
 
-.hero__cv-action {
-  position: relative;
-}
-
-.hero__cv-preview {
-  position: absolute;
-  z-index: 5;
-  top: calc(100% + 0.75rem);
-  left: 50%;
-  width: min(25rem, 80vw);
-  height: 32rem;
+.hero__cv-dialog {
+  width: min(72rem, calc(100vw - 2rem));
+  height: min(88dvh, 58rem);
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 0;
   overflow: hidden;
   border: 1px solid var(--border-subtle);
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   background: var(--surface-raised);
-  box-shadow: var(--glass-shadow);
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, 0.5rem);
-  visibility: hidden;
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease,
-    visibility 180ms ease;
+  color: var(--text-primary);
+  box-shadow: 0 2rem 8rem rgb(0 0 0 / 38%);
 }
 
-.hero__cv-preview iframe {
+.hero__cv-dialog::backdrop {
+  background: rgb(4 7 14 / 68%);
+  backdrop-filter: blur(8px);
+}
+
+.hero__cv-header {
+  display: flex;
+  min-height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--surface-background);
+}
+
+.hero__cv-label {
+  margin: 0 0 0.2rem;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.hero__cv-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.hero__cv-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.hero__cv-frame {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 5rem);
   border: 0;
+  background: var(--surface-raised);
 }
 
-@media (hover: hover) and (min-width: 900px) {
-  .hero__cv-action:hover .hero__cv-preview,
-  .hero__cv-action:focus-within .hero__cv-preview {
-    opacity: 1;
-    transform: translate(-50%, 0);
-    visibility: visible;
+@media (max-width: 680px) {
+  .hero__cv-dialog {
+    width: calc(100vw - 1rem);
+    height: calc(100dvh - 1rem);
+    max-height: none;
+    border-radius: 0.8rem;
+  }
+
+  .hero__cv-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero__cv-controls {
+    justify-content: flex-start;
+  }
+
+  .hero__cv-frame {
+    height: calc(100% - 8.5rem);
   }
 }
 
@@ -188,10 +227,6 @@
 @media (prefers-reduced-motion: reduce) {
   .hero__caret {
     animation: none;
-  }
-
-  .hero__cv-preview {
-    transition: none;
   }
 
   .hero__button--primary,

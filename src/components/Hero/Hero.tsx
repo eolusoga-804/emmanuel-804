@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { portfolioContent } from "@/content/portfolio";
 import styles from "./Hero.module.css";
 
@@ -9,6 +9,7 @@ export default function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
   const [visibleCharacters, setVisibleCharacters] = useState(titles[0].length);
   const [isDeleting, setIsDeleting] = useState(false);
+  const resumeDialogRef = useRef<HTMLDialogElement>(null);
 
   // Cycle through the supplied titles; keep a static title for reduced-motion users.
   useEffect(() => {
@@ -71,7 +72,9 @@ export default function Hero() {
           </span>
         </p>
 
-        <p className={styles["hero__summary"]}>{portfolioContent.summary}</p>
+        <p className={styles["hero__summary"]}>
+          {portfolioContent.heroSummary}
+        </p>
 
         <div className={styles["hero__actions"]}>
           <a className={styles["hero__button--primary"]} href="#contact">
@@ -79,28 +82,68 @@ export default function Hero() {
           </a>
 
           <div className={styles["hero__cv-action"]}>
-            <a
+            <button
               className={styles["hero__button--secondary"]}
-              href={portfolioContent.resumePath}
-              target="_blank"
-              rel="noopener noreferrer"
+              type="button"
+              onClick={() => resumeDialogRef.current?.showModal()}
             >
-              View CV
-            </a>
-
-            <div className={styles["hero__cv-preview"]} aria-hidden="true">
-              <iframe
-                title="Resume preview"
-                src={`${portfolioContent.resumePath}#toolbar=0&navpanes=0`}
-                tabIndex={-1}
-              />
-            </div>
+              Preview CV
+            </button>
           </div>
 
           <a className={styles["hero__button--secondary"]} href="#projects">
             View Projects
           </a>
         </div>
+
+        <dialog
+          ref={resumeDialogRef}
+          className={styles["hero__cv-dialog"]}
+          aria-labelledby="hero-cv-title"
+        >
+          <header className={styles["hero__cv-header"]}>
+            <div>
+              <p className={styles["hero__cv-label"]}>Curriculum Vitae</p>
+              <h2 className={styles["hero__cv-title"]} id="hero-cv-title">
+                {portfolioContent.identity.fullName}
+              </h2>
+            </div>
+
+            <div className={styles["hero__cv-controls"]}>
+              <a
+                className={styles["hero__button--secondary"]}
+                href={portfolioContent.resumePath}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open in new tab
+              </a>
+
+              <a
+                className={styles["hero__button--secondary"]}
+                href={portfolioContent.resumePath}
+                download
+              >
+                Download PDF
+              </a>
+
+              <button
+                className={styles["hero__button--secondary"]}
+                type="button"
+                aria-label="Close CV preview"
+                onClick={() => resumeDialogRef.current?.close()}
+              >
+                Close
+              </button>
+            </div>
+          </header>
+
+          <iframe
+            className={styles["hero__cv-frame"]}
+            title={`CV preview for ${portfolioContent.identity.fullName}`}
+            src={portfolioContent.resumePath}
+          />
+        </dialog>
       </div>
     </section>
   );

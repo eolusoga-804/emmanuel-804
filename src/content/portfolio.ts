@@ -18,6 +18,9 @@ export const portfolioContent = {
   summary:
     "Creative and detail-oriented Frontend Developer, React.js Developer, UI/UX Designer, and Graphic Designer with a multidisciplinary background in software engineering, responsive web development, UI/UX, branding, and visual communication. Experienced in creating responsive and interactive digital experiences with HTML, CSS, JavaScript, and React, while applying design principles such as typography, spacing, hierarchy, composition, color, usability, and consistency. Brings analytical thinking from Industrial Mathematics together with practical software engineering and graphic design experience.",
 
+  heroSummary:
+    "Frontend and React.js developer with a background in UI/UX and graphic design. I build responsive, interactive interfaces using HTML, CSS, JavaScript, and React, combining design principles with maintainable implementation. My Industrial Mathematics and software engineering background supports analytical, design-led problem solving.",
+
   objective:
     "To build a progressive career in frontend and React.js development while leveraging graphic design and UI/UX skills to create responsive, accessible, scalable, and visually refined digital experiences.",
 
