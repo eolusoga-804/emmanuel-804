@@ -1,0 +1,354 @@
+EMMANUEL OLUSOGA AKINOLA
+Frontend Developer | React.js Developer | UI/UX Designer | Graphic Designer
+
+MASTER PROFESSIONAL PROFILE
+Cleaned and consolidated from the supplied source material. Repeated CV, portfolio, website, biography, and resume sections have been merged. Conflicting source details are listed separately for verification rather than silently changed.
+
+1. PROFESSIONAL HEADLINE
+Frontend Developer | React.js Developer | UI/UX Designer | Graphic Designer
+
+2. PROFESSIONAL SUMMARY
+Creative and detail-oriented Frontend Developer, React.js Developer, UI/UX Designer, and Graphic Designer with a multidisciplinary background in software engineering, responsive web development, UI/UX, branding, and visual communication.
+
+Experienced in creating responsive and interactive digital experiences with HTML, CSS, JavaScript, and React, while applying design principles such as typography, spacing, hierarchy, composition, color, usability, and consistency. Experienced in branding, marketing materials, social media graphics, print collateral, web graphics, and other digital assets.
+
+Brings analytical thinking from Industrial Mathematics together with practical software engineering and graphic design experience. Values clear communication, reliability, constructive feedback, accessibility awareness, maintainable implementation, continuous learning, and dependable delivery.
+
+3. CONTACT & PROFESSIONAL DETAILS
+Name: Emmanuel Olusoga Akinola
+Preferred professional name used in the source: Emmanuel Olusoga .A
+Location: Lagos, Nigeria
+Email: eolusoga2@gmail.com
+LinkedIn: linkedin.com/in/emmanuel-olusoga
+X(Twitter): x.com/eolusoga2
+WhatsApp: 234 9074395764
+Phone: 234 9124416909
+GitHub: github.com/eolusoga-804
+Availability: Freelance | Remote | Contract | Full-time
+
+4. PROFESSIONAL EXPERIENCE
+Graphic Design Intern / Junior Graphic Designer
+Yumarib Concept — Shomolu, Lagos, Nigeria
+October 2020 – December 2025
+
+Responsibilities and contributions:
+- Designed digital and print marketing materials for client campaigns.
+- Created flyers, brochures, posters, banners, business cards, advertisements, and other promotional materials.
+- Produced social media graphics aligned with brand identity and campaign goals.
+- Collaborated with senior designers on branding, promotional, and web design projects.
+- Created website banners, icons, illustrations, web graphics, and other digital assets.
+- Applied typography, color theory, layout, composition, and visual hierarchy to design work.
+- Managed multiple assignments while meeting deadlines and maintaining quality.
+- Incorporated feedback and adapted designs to changing requirements.
+- Developed practical experience in client communication, constructive criticism, collaboration, and visual problem-solving.
+
+5. CORE PROFESSIONAL AREAS
+Frontend Development
+- Responsive website development
+- Mobile-first layouts
+- Semantic HTML
+- Interactive user interfaces
+- Reusable/component-based UI
+- Cross-browser development
+- Accessibility awareness
+- Performance awareness
+- Maintainable and clean code
+
+UI/UX Design
+- User interface design
+- Wireframing and prototyping
+- User flows
+- Information architecture
+- Visual hierarchy
+- Usability-focused layouts
+- Responsive interfaces
+- Design consistency
+- User-centered design
+
+Graphic Design
+- Brand identity and logo design
+- Social media graphics
+- Print design
+- Flyers and posters
+- Business cards
+- Marketing assets
+- Image retouching and manipulation
+- Mockup design
+- Typography
+- Color theory
+- Layout and composition
+
+6. TECHNICAL SKILLS
+Frontend technologies:
+- HTML5
+- CSS3
+- JavaScript (ES6+/ESNext)
+- React.js
+- TypeScript
+- Vue.js
+- Next.js
+- Angular
+- jQuery / JSON
+- DOM and Browser APIs
+- REST APIs
+- Bootstrap
+- Tailwind CSS
+- Sass
+- Responsive Web Design
+- Mobile-first development
+- Web performance optimization
+- SEO / OGP awareness
+
+Development and software foundations:
+- Python
+- Node.js
+- Component-based UI
+- Cross-browser development
+- Web accessibility awareness
+- Performance awareness
+- Clean code principles
+
+Design tools:
+- Figma
+- Adobe Photoshop
+- CorelDRAW
+- Canva
+- Visual Studio Code
+
+Development tools/platforms:
+- Git
+- GitHub
+- Netlify
+- Vercel
+- Microsoft Office
+
+7. PROFESSIONAL STRENGTHS
+- Creative problem solving
+- Analytical and critical thinking
+- Attention to detail
+- User-centered mindset
+- Project and time organization
+- Effective communication
+- Adaptability and quick learning
+- Constructive feedback
+- Reliability and deadline management
+- Technical proficiency
+- Continuous improvement
+
+8. SELECTED PROJECT / PORTFOLIO AREAS
+Brand Identity Design
+Created logos, color systems, and brand identity materials designed to support consistent and professional brand representation.
+
+Responsive Website Design
+Designed responsive website interfaces with emphasis on usability, accessibility, visual hierarchy, and clean layouts.
+
+Interactive Interfaces
+Developed interface concepts featuring intuitive interactions, responsive layouts, and user-focused experiences.
+
+React Web Applications
+Created dynamic web application concepts using React.js, reusable components, and modern frontend practices.
+
+Digital Visual Design
+Created digital designs using typography, color theory, spacing, composition, and visual hierarchy.
+
+Social Media Campaign Designs
+Created promotional graphics and advertising creatives for social media and digital campaigns.
+
+Projects named in the portfolio source:
+- VS4 Autos — mobile mechanic service based in the UK.
+- Real Estate Landing Page / GL Apartments — property-focused responsive website concept.
+- Restaurant Website — modern restaurant experience using UI principles.
+- SecureFlow Hosting — web hosting company website concept.
+- MyForecast — weather/information interface concept.
+
+Note: The source identifies some of these as placeholders and states that project screenshots, implementation details, links, and case-study information should be verified or replaced with the actual project information.
+
+9. SERVICES
+- Responsive Website Development
+- Frontend Development
+- UI/UX Design
+- Landing Page Design
+- Portfolio Website Development
+- Business Website Development
+- Brand Identity Design
+- Graphic Design
+- Website Redesign
+
+10. DESIGN & DEVELOPMENT PHILOSOPHY
+
+People and purpose first
+Start by understanding the audience, information needs, business goals, and desired outcome before choosing the structure or visual direction.
+
+Clarity in visual design
+Use typography, spacing, contrast, alignment, and hierarchy to guide attention and make information easier to understand.
+
+Responsive and accessible by default
+Design for phones, tablets, and larger displays while considering semantic structure, readable content, keyboard access, and inclusive interaction patterns.
+
+Maintainable implementation
+Use semantic HTML, organized CSS, reusable components, consistent patterns, and understandable JavaScript to make products easier to maintain and extend.
+
+Performance and quality
+Consider browser behavior, performance, responsive states, accessibility, content density, and implementation quality throughout development.
+
+Dependable delivery
+Clarify expectations, organize work into manageable stages, communicate progress, review the finished product, incorporate feedback, and deliver complete work with a clear handoff.
+
+11. WORKFLOW
+01 — DISCOVER
+Understand requirements, users, constraints, content, competitive context, goals, and success criteria.
+
+02 — PLAN
+Organize content, information architecture, navigation, user journeys, wireframes, and responsive states.
+
+03 — DESIGN
+Develop visual hierarchy through typography, spacing, color systems, components, and consistent design rules.
+
+04 — BUILD
+Translate designs into responsive and interactive frontend experiences using semantic structure and maintainable implementation patterns.
+
+05 — VALIDATE
+Test across devices and browsers, review keyboard interaction and focus states, consider accessibility and performance, and address edge cases.
+
+06 — IMPROVE
+Review the finished product, incorporate feedback, deploy, maintain, and plan future improvements.
+
+12. EDUCATION
+University of Lagos (UNILAG), Akoka, Lagos
+Bachelor of Science (B.Sc.) — Industrial Mathematics
+Applied & Computational Mathematics Option
+Second Class Lower Division
+October 2019 – September 2025
+
+Aptech Computer Education, Maryland / ACE-Lagos-1, Lagos
+Advanced Diploma in Software Engineering (ADSE)
+Distinction
+June 2020 – December 2023
+
+13. CERTIFICATIONS / TRAINING
+- Advanced Diploma in Software Engineering (Distinction) — Aptech Computer Education
+- Graphic Designing with Adobe Graphic Design Software(s) — Yumarib Concept
+- B.Sc. Industrial Mathematics — Applied & Computational Mathematics Option, Second Class Lower Division
+
+14. LANGUAGES
+- English — Professional/Fluent
+- Yoruba — Professional/Fluent
+
+15. CAREER HIGHLIGHTS
+- Completed an Advanced Diploma in Software Engineering with Distinction.
+- Completed a B.Sc. in Industrial Mathematics with Second Class Lower Division.
+- Developed practical experience spanning graphic design, branding, UI/UX, and frontend development.
+- Built a design-led approach to frontend development.
+- Continued expanding knowledge of modern frontend technologies and design tools.
+
+16. MISSION, VISION & VALUES
+Mission:
+Create modern, accessible, user-focused digital experiences that help businesses communicate effectively and achieve their goals.
+
+Vision:
+Become a trusted software and design professional recognized for impactful digital products and meaningful client relationships.
+
+Values:
+Integrity | Excellence | Creativity | Collaboration | Learning | Reliability
+
+17. CAREER DIRECTION / OBJECTIVE
+To build a progressive career in frontend and React.js development while leveraging graphic design and UI/UX skills to create responsive, accessible, scalable, and visually refined digital experiences.
+
+The source also expresses interest in contributing to organizations and projects that build useful digital products, communicating clearly with teams and clients, learning continuously, and delivering measurable value.
+
+18. AVAILABILITY
+Freelance | Remote | Contract | Full-time
+
+19. ADDITIONAL / ADMINISTRATIVE INFORMATION
+Employment status in source: Not currently employed
+NYSC status: Not applicable
+Industry interests listed: Software Development; Media & Communications; Graphic and Print Design
+Address/postcode listed in different versions: Lagos 102216, Nigeria; Lagos 100234, Nigeria
+
+For public-facing CVs and portfolios, personal details such as date of birth and full residential address should be omitted unless specifically required.
+
+20. REFERENCES
+Available upon request.
+
+21. WEBSITE / PORTFOLIO CONTENT STRUCTURE
+The source contains several versions of a personal portfolio website. A clean structure is:
+
+Home
+- Name and professional headline
+- Short value proposition
+- Primary calls to action: Hire Me / View Work / Download CV
+- Availability indicator
+
+About
+- Professional summary
+- Background
+- Career direction
+- Mission, vision, and values
+
+Skills / Tech Stack
+- Frontend
+- UI/UX
+- Graphic Design
+- Tools
+- Supporting technologies
+
+Services
+- Frontend Development
+- UI/UX Design
+- Website Development
+- Landing Pages
+- Brand Identity
+- Graphic Design
+- Website Redesign
+
+Projects
+- BOA Fashion
+- Real Estate / GL Apartments
+- Restaurant
+- SecureFlow Hosting
+- MyForecast
+- Only publish verified project details, screenshots, technologies, GitHub links, and live demo links.
+
+Process / Philosophy
+- Discover
+- Plan
+- Design
+- Build
+- Validate
+- Improve
+
+Why Work With Me
+- User-centered approach
+- Attention to detail
+- Responsive development
+- Strong communication
+- Continuous improvement
+- Creative problem solving
+
+Testimonials
+- Use placeholder client/collaborator testimonials (temporarily - they will be replaced by new ones later).
+- The supplied source contains placeholder testimonials and explicitly indicates that verified feedback was not supplied.
+- Each Testimonial should have a client/customer image (in a small circular glass container), organization/business name, client's title/role, testimonial text/message.
+
+Contact
+- Email
+- Phone
+- WhatsApp
+- X(Twitter)
+- Lagos, Nigeria
+- LinkedIn
+- Portfolio
+- GitHub
+- Contact form (for potential client, user, customer, etcetera)
+
+22. RECOMMENDED MASTER POSITIONING
+Primary:
+Frontend Developer / React.js Developer
+
+Secondary:
+UI/UX Designer
+
+Additional:
+Graphic Designer
+
+This positioning keeps the technical career direction clear while retaining the design background as a competitive advantage.
