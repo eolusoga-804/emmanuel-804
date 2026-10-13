@@ -1,0 +1,122 @@
+.loading-screen {
+  position: fixed;
+  z-index: 60;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: color-mix(in srgb, var(--page-background) 86%, transparent);
+  backdrop-filter: blur(18px);
+}
+
+.loading-screen__card {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 27rem);
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.5rem;
+  background: var(--surface-background);
+  box-shadow: var(--glass-shadow);
+  text-align: center;
+}
+
+.loading-screen__brand {
+  color: var(--text-primary);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.loading-screen__spinner {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  aspect-ratio: 1;
+  margin: 1.75rem 0 1.25rem;
+}
+
+.loading-screen__ring {
+  position: absolute;
+  inset: 0;
+  border: 3px solid var(--border-subtle);
+  border-top-color: var(--color-accent);
+  border-right-color: var(--color-secondary);
+  border-radius: 50%;
+  box-shadow: 0 0 24px var(--ambient-glow);
+  animation: loading-spin 900ms linear infinite;
+}
+
+.loading-screen__center {
+  width: 0.65rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 18px var(--ambient-glow);
+  animation: loading-pulse 1.2s ease-in-out infinite alternate;
+}
+
+.loading-screen__eyebrow {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.loading-screen__title {
+  margin: 0.5rem 0 0;
+  color: var(--text-primary);
+  font-size: clamp(1.15rem, 4vw, 1.5rem);
+}
+
+.loading-screen__message {
+  margin: 0.55rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.loading-screen__activity {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+}
+
+.loading-screen__activity span {
+  width: 0.35rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color-accent);
+  animation: loading-pulse 700ms ease-in-out infinite alternate;
+}
+
+.loading-screen__activity span:nth-child(2) {
+  animation-delay: 160ms;
+}
+
+.loading-screen__activity span:nth-child(3) {
+  animation-delay: 320ms;
+}
+
+@keyframes loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-pulse {
+  to {
+    opacity: 0.35;
+    transform: scale(0.78);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-screen__ring,
+  .loading-screen__center,
+  .loading-screen__activity span {
+    animation: none;
+  }
+}
