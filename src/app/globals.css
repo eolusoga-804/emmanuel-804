@@ -1,26 +1,119 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --page-background: #f6f8fc;
+  --surface-background: rgb(255 255 255 / 78%);
+  --surface-raised: #ffffff;
+  --text-primary: #182033;
+  --text-muted: #536078;
+  --border-subtle: rgb(29 56 102 / 16%);
+  --color-secondary: #173e83;
+  --color-accent: #24b9e8;
+  --color-success: #16834a;
+  --focus-color: #087ca8;
+  --glass-shadow: 0 16px 48px rgb(28 48 82 / 12%);
+  --ambient-glow: rgb(36 185 232 / 18%);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --page-background: #090b10;
+  --surface-background: rgb(22 24 31 / 82%);
+  --surface-raised: #151820;
+  --text-primary: #f4f5f8;
+  --text-muted: #b0b7c5;
+  --border-subtle: rgb(255 255 255 / 13%);
+  --color-secondary: #c95b22;
+  --color-accent: #ff8b45;
+  --color-success: #45c982;
+  --focus-color: #ff9a5e;
+  --glass-shadow: 0 18px 52px rgb(0 0 0 / 36%);
+  --ambient-glow: rgb(255 123 52 / 18%);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-page: var(--page-background);
+  --color-surface: var(--surface-background);
+  --color-copy: var(--text-primary);
+  --color-copy-muted: var(--text-muted);
+  --color-brand: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  background: var(--page-background);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--page-background);
+  color: var(--text-primary);
+  font-family: var(--font-inter), Arial, sans-serif;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-poppins), Arial, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--page-background);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
 }
