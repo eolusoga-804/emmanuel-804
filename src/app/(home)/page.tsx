@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero/Hero";
 import About from "@/components/About/About";
+import Skills from "@/components/Skills/Skills";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main className={styles["home-page"]} id="home">
       <Hero />
       <About />
+      <Skills />
     </main>
   );
 }
