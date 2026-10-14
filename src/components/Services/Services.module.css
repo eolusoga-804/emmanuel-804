@@ -1,0 +1,122 @@
+.services {
+  width: 100%;
+  padding: clamp(4rem, 8vw, 6rem) clamp(1.25rem, 4vw, 2rem);
+  scroll-margin-top: 5.5rem;
+}
+
+.services__content {
+  width: min(100%, 74rem);
+  margin-inline: auto;
+}
+
+.services__header {
+  max-width: 42rem;
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.services__eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--color-secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.services__title {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.15;
+}
+
+.services__intro {
+  margin: 0.8rem 0 0;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.services__card {
+  position: relative;
+  min-height: 13rem;
+  padding: clamp(1.2rem, 2.5vw, 1.7rem);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.2rem;
+  background:
+    radial-gradient(circle at 100% 0%, var(--ambient-glow), transparent 48%),
+    var(--surface-background);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(16px);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.services__card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: 0 18px 44px var(--ambient-glow);
+}
+
+.services__number {
+  display: inline-grid;
+  min-width: 2.5rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  color: var(--color-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.services__card-title {
+  max-width: 18rem;
+  margin: 1.1rem 0 0;
+  color: var(--text-primary);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.35;
+}
+
+.services__description {
+  margin: 0.65rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .services__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services__card {
+    min-height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services__card {
+    transition: none;
+  }
+
+  .services__card:hover {
+    transform: none;
+  }
+}
