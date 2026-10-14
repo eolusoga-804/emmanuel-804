@@ -239,12 +239,36 @@ export const portfolioContent = {
   ],
 
   strengths: [
-    "Creative problem solving",
-    "Analytical and critical thinking",
-    "Attention to detail",
-    "User-centered mindset",
-    "Effective communication",
-    "Adaptability and continuous learning",
+    {
+      title: "Creative problem solving",
+      description:
+        "Brings analytical thinking from Industrial Mathematics together with practical software engineering and graphic design experience.",
+    },
+    {
+      title: "Analytical and critical thinking",
+      description:
+        "Uses analytical thinking from an Industrial Mathematics background when approaching digital work.",
+    },
+    {
+      title: "Attention to detail",
+      description:
+        "Applies typography, spacing, hierarchy, composition, color, usability, and consistency to digital experiences.",
+    },
+    {
+      title: "User-centered mindset",
+      description:
+        "Understands the audience, information needs, goals, and constraints before choosing a structure or visual direction.",
+    },
+    {
+      title: "Effective communication",
+      description:
+        "Values clear communication, constructive feedback, and collaboration.",
+    },
+    {
+      title: "Adaptability and continuous learning",
+      description:
+        "Incorporates feedback, adapts to changing requirements, and values continuous learning.",
+    },
   ],
 
   philosophy: [

@@ -84,7 +84,10 @@ export type PortfolioContent = {
   skillsMarquees: [SkillGroup, SkillGroup, SkillGroup];
   services: Service[];
   projects: Project[];
-  strengths: string[];
+  strengths: {
+    title: string;
+    description: string;
+  }[];
   philosophy: {
     title: string;
     description: string;
