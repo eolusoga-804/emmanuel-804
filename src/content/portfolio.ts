@@ -368,7 +368,36 @@ export const portfolioContent = {
   statistics: [] as PortfolioContent["statistics"],
 
   // Add answers only when they can be supported by supplied information.
-  faqs: [],
+  faqs: [
+    {
+      question: "What services do you offer?",
+      answer:
+        "Responsive website development, frontend development, UI/UX design, landing page design, brand identity design, and graphic design.",
+    },
+    {
+      question: "What work arrangements are you available for?",
+      answer: "Freelance, remote, contract, and full-time opportunities.",
+    },
+    {
+      question: "Where are you based?",
+      answer: "Lagos, Nigeria.",
+    },
+    {
+      question: "How can I discuss a project with you?",
+      answer:
+        "You can reach me by email at eolusoga2@gmail.com or through the WhatsApp contact button on this page.",
+    },
+    {
+      question: "Can I view or download your CV?",
+      answer:
+        "Yes. Use the Preview CV button in the Hero section to open the resume viewer, where you can view the PDF, open it in a new tab, or download it.",
+    },
+    {
+      question: "Which projects are featured?",
+      answer:
+        "The featured projects are VS4 Autos, SecureFlow Hosting, and MyForecast. Project links, technology lists, and additional details are still being confirmed.",
+    },
+  ],
 
   seo: {
     title: "Emmanuel Olusoga Akinola | Frontend Developer",
