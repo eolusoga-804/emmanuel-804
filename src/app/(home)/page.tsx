@@ -4,6 +4,7 @@ import Skills from "@/components/Skills/Skills";
 import Services from "@/components/Services/Services";
 import Projects from "@/components/Projects/Projects";
 import WhyWorkWithMe from "@/components/WhyWorkWithMe/WhyWorkWithMe";
+import DevelopmentPhilosophy from "@/components/DevelopmentPhilosophy/DevelopmentPhilosophy";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
       <Projects />
       <WhyWorkWithMe />
+      <DevelopmentPhilosophy />
     </main>
   );
 }
