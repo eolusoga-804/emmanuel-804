@@ -7,6 +7,7 @@ import WhyWorkWithMe from "@/components/WhyWorkWithMe/WhyWorkWithMe";
 import DevelopmentPhilosophy from "@/components/DevelopmentPhilosophy/DevelopmentPhilosophy";
 import Workflow from "@/components/Workflow/Workflow";
 import Statistics from "@/components/Statistics/Statistics";
+import CareerJourney from "@/components/CareerJourney/CareerJourney";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <DevelopmentPhilosophy />
       <Workflow />
       <Statistics />
+      <CareerJourney />
     </main>
   );
 }

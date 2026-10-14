@@ -340,11 +340,11 @@ export const portfolioContent = {
 
   careerTimeline: [
     {
-      period: "October 2020 – December 2025",
-      title: "Graphic Design Intern / Junior Graphic Designer",
-      organization: "Yumarib Concept",
+      period: "October 2019 – September 2025",
+      title: "B.Sc. Industrial Mathematics",
+      organization: "University of Lagos",
       description:
-        "Worked across branding, promotional materials, social media graphics, and web assets.",
+        "Studied Applied & Computational Mathematics; Second Class Lower Division.",
     },
     {
       period: "June 2020 – December 2023",
@@ -353,11 +353,11 @@ export const portfolioContent = {
       description: "Completed the program with Distinction.",
     },
     {
-      period: "October 2019 – September 2025",
-      title: "B.Sc. Industrial Mathematics",
-      organization: "University of Lagos",
+      period: "October 2020 – December 2025",
+      title: "Graphic Design Intern / Junior Graphic Designer",
+      organization: "Yumarib Concept",
       description:
-        "Studied Applied & Computational Mathematics; Second Class Lower Division.",
+        "Worked across branding, promotional materials, social media graphics, and web assets.",
     },
   ],
 
