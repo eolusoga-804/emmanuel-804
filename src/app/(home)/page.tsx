@@ -8,6 +8,7 @@ import DevelopmentPhilosophy from "@/components/DevelopmentPhilosophy/Developmen
 import Workflow from "@/components/Workflow/Workflow";
 import Statistics from "@/components/Statistics/Statistics";
 import CareerJourney from "@/components/CareerJourney/CareerJourney";
+import Testimonials from "@/components/Testimonials/Testimonials";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <Workflow />
       <Statistics />
       <CareerJourney />
+      <Testimonials />
     </main>
   );
 }

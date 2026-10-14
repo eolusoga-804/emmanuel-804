@@ -362,7 +362,7 @@ export const portfolioContent = {
   ],
 
   // No approved testimonial copy or author photos were supplied.
-  testimonials: [],
+  testimonials: [] as PortfolioContent["testimonials"],
 
   // The source does not provide portfolio statistics.
   statistics: [] as PortfolioContent["statistics"],
