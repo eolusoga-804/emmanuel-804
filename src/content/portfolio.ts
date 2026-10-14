@@ -365,7 +365,7 @@ export const portfolioContent = {
   testimonials: [],
 
   // The source does not provide portfolio statistics.
-  statistics: [],
+  statistics: [] as PortfolioContent["statistics"],
 
   // Add answers only when they can be supported by supplied information.
   faqs: [],

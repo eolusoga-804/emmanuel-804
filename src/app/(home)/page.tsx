@@ -6,6 +6,7 @@ import Projects from "@/components/Projects/Projects";
 import WhyWorkWithMe from "@/components/WhyWorkWithMe/WhyWorkWithMe";
 import DevelopmentPhilosophy from "@/components/DevelopmentPhilosophy/DevelopmentPhilosophy";
 import Workflow from "@/components/Workflow/Workflow";
+import Statistics from "@/components/Statistics/Statistics";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <WhyWorkWithMe />
       <DevelopmentPhilosophy />
       <Workflow />
+      <Statistics />
     </main>
   );
 }
