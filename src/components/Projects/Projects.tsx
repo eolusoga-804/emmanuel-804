@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { portfolioContent } from "@/content/portfolio";
 import styles from "./Projects.module.css";
 
@@ -119,6 +120,9 @@ export default function Projects() {
 
         <footer className={styles["projects__footer"]}>
           <p>Would you like to see more work?</p>
+          <Link className={styles["projects__portfolio-link"]} href="/projects">
+            Open project showcase
+          </Link>
           <a
             className={styles["projects__portfolio-link"]}
             href={portfolioRequestUrl}
