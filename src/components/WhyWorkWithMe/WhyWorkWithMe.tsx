@@ -22,7 +22,11 @@ export default function WhyWorkWithMe() {
 
         <div className={styles["why-work__grid"]}>
           {portfolioContent.strengths.map((strength, index) => (
-            <details className={styles["why-work__card"]} key={strength.title}>
+            <details
+              className={styles["why-work__card"]}
+              key={strength.title}
+              name="why-work-items"
+            >
               <summary className={styles["why-work__summary"]}>
                 <span className={styles["why-work__number"]} aria-hidden="true">
                   {String(index + 1).padStart(2, "0")}

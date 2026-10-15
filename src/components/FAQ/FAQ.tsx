@@ -17,7 +17,11 @@ export default function FAQ() {
 
         <div className={styles["faq__list"]}>
           {portfolioContent.faqs.map((item) => (
-            <details className={styles["faq__item"]} key={item.question}>
+            <details
+              className={styles["faq__item"]}
+              key={item.question}
+              name="faq-items"
+            >
               <summary className={styles["faq__question"]}>
                 <span>{item.question}</span>
                 <span className={styles["faq__toggle"]} aria-hidden="true">
