@@ -359,6 +359,13 @@ export const portfolioContent = {
       description:
         "Worked across branding, promotional materials, social media graphics, and web assets.",
     },
+    {
+      period: "Ongoing",
+      title: "Learning and Growing",
+      organization: "Independent professional development",
+      description:
+        "Continuing to develop practical skills across frontend development, UI/UX design, and graphic design through hands-on learning and project work.",
+    },
   ],
 
   // No approved testimonial copy or author photos were supplied.

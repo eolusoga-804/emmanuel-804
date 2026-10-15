@@ -155,3 +155,72 @@
     grid-row: 1;
   }
 }
+
+@supports (animation-timeline: view()) {
+  .career-journey__timeline::before {
+    transform: translateX(-50%) scaleY(0.08);
+    transform-origin: top;
+    animation: career-path-draw linear both;
+    animation-timeline: view(block);
+    animation-range: entry 10% exit 90%;
+  }
+
+  .career-journey__entry {
+    view-timeline-name: --career-entry;
+    view-timeline-axis: block;
+  }
+
+  .career-journey__card {
+    animation: career-card-highlight linear both;
+    animation-timeline: --career-entry;
+    animation-range: entry 30% cover 60%;
+  }
+
+  .career-journey__marker {
+    animation: career-marker-highlight linear both;
+    animation-timeline: --career-entry;
+    animation-range: entry 30% cover 60%;
+  }
+
+  @keyframes career-path-draw {
+    to {
+      transform: translateX(-50%) scaleY(1);
+    }
+  }
+
+  @keyframes career-card-highlight {
+    from {
+      background: var(--surface-background);
+      border-color: var(--border-subtle);
+    }
+
+    to {
+      background: var(--surface-raised);
+      border-color: var(--color-accent);
+    }
+  }
+
+  @keyframes career-marker-highlight {
+    from {
+      color: var(--color-secondary);
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 var(--ambient-glow);
+      transform: scale(1);
+    }
+
+    to {
+      color: var(--text-primary);
+      border-color: var(--color-secondary);
+      box-shadow: 0 0 1.2rem var(--ambient-glow);
+      transform: scale(1.12);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .career-journey__timeline::before,
+  .career-journey__card,
+  .career-journey__marker {
+    animation: none;
+  }
+}
