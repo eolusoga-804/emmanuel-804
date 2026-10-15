@@ -12,7 +12,46 @@ const testimonials: PortfolioContent["testimonials"] =
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  if (testimonials.length === 0) return null;
+  if (testimonials.length === 0) {
+    return (
+      <section
+        className={styles.testimonials}
+        id="testimonials"
+        aria-labelledby="testimonials-title"
+      >
+        <div className={styles["testimonials__content"]}>
+          <header className={styles["testimonials__header"]}>
+            <p className={styles["testimonials__eyebrow"]}>Feedback</p>
+            <h2
+              className={styles["testimonials__title"]}
+              id="testimonials-title"
+            >
+              Testimonials
+            </h2>
+          </header>
+
+          <div className={styles["testimonials__empty"]} role="status">
+            <span
+              className={styles["testimonials__empty-mark"]}
+              aria-hidden="true"
+            >
+              “
+            </span>
+            <p className={styles["testimonials__empty-title"]}>
+              This space is ready for feedback.
+            </p>
+            <p className={styles["testimonials__empty-copy"]}>
+              Testimonials will appear here when approved feedback is available.
+            </p>
+            <a className={styles["testimonials__contact-link"]} href="/contact">
+              Get in touch
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   const activeTestimonial = testimonials[activeIndex];
 
