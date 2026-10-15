@@ -403,7 +403,18 @@ export const portfolioContent = {
     title: "Emmanuel Olusoga Akinola | Frontend Developer",
     description:
       "Portfolio of Emmanuel Olusoga Akinola, a frontend developer with experience in React, UI/UX design, and graphic design.",
-    canonicalUrl: null,
-    openGraphImage: null,
+    canonicalUrl: "https://emmanuel-804.netlify.app",
+    pages: {
+      projects: {
+        title: "Projects | Emmanuel#804",
+        description:
+          "Selected frontend, UI/UX, and graphic design projects from Emmanuel#804’s portfolio.",
+      },
+      contact: {
+        title: "Contact | Emmanuel#804",
+        description:
+          "Contact Emmanuel#804 in Lagos, Nigeria about frontend development, UI/UX design, or graphic design.",
+      },
+    },
   },
 } satisfies PortfolioContent;

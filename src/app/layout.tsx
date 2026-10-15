@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import { portfolioContent } from "@/content/portfolio";
+import { createPageMetadata } from "@/content/metadata";
 import { Inter, Poppins } from "next/font/google";
 import BackgroundEffects from "@/components/BackgroundEffects/BackgroundEffects";
 import FloatingControls from "@/components/FloatingControls/FloatingControls";
@@ -16,9 +17,22 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
-export const metadata: Metadata = {
-  title: "Emmanuel#804 Portfolio",
-  description: "Personal portfolio of Emmanuel Olusoga Akinola.",
+export const metadata = createPageMetadata();
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: portfolioContent.identity.fullName,
+  url: portfolioContent.seo.canonicalUrl,
+  jobTitle: portfolioContent.identity.primaryTitle,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Lagos",
+    addressCountry: "NG",
+  },
+  sameAs: portfolioContent.contact.links.flatMap((link) =>
+    link.href ? [link.href] : [],
+  ),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -29,6 +43,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <div className="site-shell">
           <BackgroundEffects />
           <div className="site-shell__content">

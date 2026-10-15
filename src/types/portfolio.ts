@@ -104,7 +104,16 @@ export type PortfolioContent = {
   seo: {
     title: string;
     description: string;
-    canonicalUrl: string | null;
-    openGraphImage: string | null;
+    canonicalUrl: string;
+    pages: {
+      projects: {
+        title: string;
+        description: string;
+      };
+      contact: {
+        title: string;
+        description: string;
+      };
+    };
   };
 };
