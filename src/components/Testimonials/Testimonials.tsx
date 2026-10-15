@@ -20,7 +20,7 @@ export default function Testimonials() {
         aria-labelledby="testimonials-title"
       >
         <div className={styles["testimonials__content"]}>
-          <header className={styles["testimonials__header"]}>
+          <header className={styles["testimonials__header"]} data-aos="zoom-in">
             <p className={styles["testimonials__eyebrow"]}>Feedback</p>
             <h2
               className={styles["testimonials__title"]}
@@ -72,7 +72,7 @@ export default function Testimonials() {
       aria-labelledby="testimonials-title"
     >
       <div className={styles["testimonials__content"]}>
-        <header className={styles["testimonials__header"]}>
+        <header className={styles["testimonials__header"]} data-aos="zoom-in">
           <p className={styles["testimonials__eyebrow"]}>Feedback</p>
           <h2 className={styles["testimonials__title"]} id="testimonials-title">
             Testimonials

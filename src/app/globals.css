@@ -72,6 +72,11 @@ html {
   background: var(--page-background);
 }
 
+html:not(.aos-ready) [data-aos] {
+  opacity: 1;
+  transform: none;
+}
+
 body {
   min-width: 320px;
   min-height: 100vh;

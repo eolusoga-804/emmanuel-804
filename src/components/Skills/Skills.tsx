@@ -9,7 +9,7 @@ export default function Skills() {
       aria-labelledby="skills-title"
     >
       <div className={styles["skills__content"]}>
-        <header className={styles["skills__header"]}>
+        <header className={styles["skills__header"]} data-aos="zoom-in">
           <p className={styles["skills__eyebrow"]}>Skills & toolkit</p>
           <h2 className={styles["skills__title"]} id="skills-title">
             The tools behind the work

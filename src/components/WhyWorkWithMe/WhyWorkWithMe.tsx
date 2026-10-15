@@ -9,7 +9,7 @@ export default function WhyWorkWithMe() {
       aria-labelledby="why-work-title"
     >
       <div className={styles["why-work__content"]}>
-        <header className={styles["why-work__header"]}>
+        <header className={styles["why-work__header"]} data-aos="zoom-in">
           <p className={styles["why-work__eyebrow"]}>Working together</p>
           <h2 className={styles["why-work__title"]} id="why-work-title">
             Why Work With Me

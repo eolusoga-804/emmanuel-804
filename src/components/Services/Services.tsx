@@ -9,7 +9,7 @@ export default function Services() {
       aria-labelledby="services-title"
     >
       <div className={styles["services__content"]}>
-        <header className={styles["services__header"]}>
+        <header className={styles["services__header"]} data-aos="zoom-in">
           <p className={styles["services__eyebrow"]}>What I do</p>
           <h2 className={styles["services__title"]} id="services-title">
             Services

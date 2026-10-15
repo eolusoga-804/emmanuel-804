@@ -5,7 +5,7 @@ export default function FAQ() {
   return (
     <section className={styles.faq} id="faq" aria-labelledby="faq-title">
       <div className={styles["faq__content"]}>
-        <header className={styles["faq__header"]}>
+        <header className={styles["faq__header"]} data-aos="zoom-in">
           <p className={styles["faq__eyebrow"]}>Questions</p>
           <h2 className={styles["faq__title"]} id="faq-title">
             Frequently Asked Questions

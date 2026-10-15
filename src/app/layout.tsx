@@ -4,6 +4,10 @@ import { Inter, Poppins } from "next/font/google";
 import BackgroundEffects from "@/components/BackgroundEffects/BackgroundEffects";
 import FloatingControls from "@/components/FloatingControls/FloatingControls";
 import SiteNavigation from "@/components/SiteNavigation/SiteNavigation";
+
+import "aos/dist/aos.css";
+import AOSProvider from "@/components/AOSProvider/AOSProvider";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -49,6 +53,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
           }}
         />
+        <AOSProvider />
         <div className="site-shell">
           <BackgroundEffects />
           <div className="site-shell__content">
