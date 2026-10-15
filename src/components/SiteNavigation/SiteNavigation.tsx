@@ -5,12 +5,12 @@ import { portfolioContent } from "@/content/portfolio";
 import styles from "./SiteNavigation.module.css";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Services", href: "/#services" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function SiteNavigation() {
@@ -76,7 +76,7 @@ export default function SiteNavigation() {
         >
           <a
             className={styles["site-nav__brand"]}
-            href="#home"
+            href="/#home"
             onClick={closePanel}
           >
             {portfolioContent.identity.displayName.toUpperCase()}
