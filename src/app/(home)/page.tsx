@@ -11,24 +11,28 @@ import CareerJourney from "@/components/CareerJourney/CareerJourney";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import FAQ from "@/components/FAQ/FAQ";
 import Contact from "@/components/Contact/Contact";
+import Footer from "@/components/Footer/Footer";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles["home-page"]} id="home">
-      <Hero />
-      <About />
-      <Skills />
-      <Services />
-      <Projects />
-      <WhyWorkWithMe />
-      <DevelopmentPhilosophy />
-      <Workflow />
-      <Statistics />
-      <CareerJourney />
-      <Testimonials />
-      <FAQ />
-      <Contact />
-    </main>
+    <>
+      <main className={styles["home-page"]} id="home">
+        <Hero />
+        <About />
+        <Skills />
+        <Services />
+        <Projects />
+        <WhyWorkWithMe />
+        <DevelopmentPhilosophy />
+        <Workflow />
+        <Statistics />
+        <CareerJourney />
+        <Testimonials />
+        <FAQ />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
