@@ -365,7 +365,24 @@ export const portfolioContent = {
   testimonials: [] as PortfolioContent["testimonials"],
 
   // The source does not provide portfolio statistics.
-  statistics: [] as PortfolioContent["statistics"],
+  statistics: [
+    {
+      value: 3,
+      label: "Professional areas",
+      context: "Frontend development, UI/UX design, and graphic design.",
+    },
+    {
+      value: 2,
+      label: "Qualifications",
+      context:
+        "B.Sc. in Industrial Mathematics and Advanced Diploma in Software Engineering.",
+    },
+    {
+      value: 2,
+      label: "Languages",
+      context: "English and Yoruba.",
+    },
+  ],
 
   // Add answers only when they can be supported by supplied information.
   faqs: [
