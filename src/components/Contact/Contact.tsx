@@ -9,6 +9,7 @@ export default function Contact() {
 
   const { contact } = portfolioContent;
   const phoneHref = contact.phone.replace(/[^\d+]/g, "");
+  const secondaryPhoneHref = contact.secondaryPhone.replace(/[^\d+]/g, "");
   const whatsappHref = `${contact.whatsappUrl}?text=${encodeURIComponent(
     "Hi Emmanuel, I’d like to discuss a project.",
   )}`;
@@ -20,10 +21,11 @@ export default function Contact() {
     const name = String(formData.get("name") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
+    const service = String(formData.get("service") ?? "").trim();
 
     const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\n${message}`,
+      `Name: ${name}\nEmail: ${email}\nService: ${service}\n\n${message}`,
     );
 
     setFormNotice(
@@ -89,6 +91,31 @@ export default function Contact() {
             <div className={styles["contact__field"]}>
               <label
                 className={styles["contact__label"]}
+                htmlFor="contact-service"
+              >
+                Service
+              </label>
+              <select
+                className={styles["contact__input"]}
+                id="contact-service"
+                name="service"
+                required
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select a service
+                </option>
+                {portfolioContent.services.map((service) => (
+                  <option key={service.title} value={service.title}>
+                    {service.title}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className={styles["contact__field"]}>
+              <label
+                className={styles["contact__label"]}
                 htmlFor="contact-message"
               >
                 Message
@@ -130,6 +157,16 @@ export default function Contact() {
             <a className={styles["contact__link"]} href={`tel:${phoneHref}`}>
               <span className={styles["contact__link-label"]}>Phone</span>
               <span>{contact.phone}</span>
+            </a>
+
+            <a
+              className={styles["contact__link"]}
+              href={`tel:${secondaryPhoneHref}`}
+            >
+              <span className={styles["contact__link-label"]}>
+                Second phone / WhatsApp
+              </span>
+              <span>{contact.secondaryPhone}</span>
             </a>
 
             <a

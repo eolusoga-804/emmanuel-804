@@ -42,6 +42,7 @@ export const portfolioContent = {
   contact: {
     email: "eolusoga2@gmail.com",
     phone: "+2349124416909",
+    secondaryPhone: "+2349074395764",
     whatsappNumber: "+2349074395764",
     whatsappUrl: "https://wa.me/2349074395764",
     links: [

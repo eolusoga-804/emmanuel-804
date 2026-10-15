@@ -68,6 +68,7 @@ export type PortfolioContent = {
   contact: {
     email: string;
     phone: string;
+    secondaryPhone: string;
     whatsappNumber: string;
     whatsappUrl: string;
     links: ContactLink[];

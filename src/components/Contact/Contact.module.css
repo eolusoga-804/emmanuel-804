@@ -99,7 +99,7 @@
 .contact__submit {
   width: min(100%, 18rem);
   min-height: 2.9rem;
-  justify-self: start;
+  justify-self: center;
   padding: 0.7rem 1.1rem;
   border: 1px solid var(--color-secondary);
   border-radius: 999px;
@@ -188,7 +188,7 @@
   }
 
   .contact__submit {
-    justify-self: stretch;
+    justify-self: center;
   }
 }
 
