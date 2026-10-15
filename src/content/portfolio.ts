@@ -442,4 +442,12 @@ export const portfolioContent = {
       },
     },
   },
+
+  contactOutro: {
+    eyebrow: "A little spark",
+    title: "Got a good idea?",
+    message:
+      "Big plans, tiny details, or a “what if?”—let’s start with a conversation.",
+    actionLabel: "Send the first hello",
+  },
 } satisfies PortfolioContent;

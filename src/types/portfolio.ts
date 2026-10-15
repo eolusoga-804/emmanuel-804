@@ -117,4 +117,10 @@ export type PortfolioContent = {
       };
     };
   };
+  contactOutro: {
+    eyebrow: string;
+    title: string;
+    message: string;
+    actionLabel: string;
+  };
 };
