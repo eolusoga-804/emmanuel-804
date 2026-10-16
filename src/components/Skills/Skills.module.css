@@ -72,18 +72,15 @@
 
 .skills__group {
   min-width: 0;
-  padding: 1rem 1rem 0.75rem;
-  border: 1px solid var(--border-subtle);
+  padding: 0 1rem 0.75rem;
   border-radius: 1.1rem;
-  background: var(--surface-background);
-  box-shadow: var(--glass-shadow);
-  backdrop-filter: blur(16px);
 }
 
 .skills__group-title {
   margin: 0 0 0.55rem;
   color: var(--text-primary);
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .skills__viewport {
