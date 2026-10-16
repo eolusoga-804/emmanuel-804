@@ -63,6 +63,51 @@
   box-shadow: 0 18px 44px var(--ambient-glow);
 }
 
+.projects__card:nth-child(1) {
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      color-mix(in srgb, var(--orb-color-1) 29%, transparent),
+      transparent 52%
+    ),
+    radial-gradient(
+      circle at 0% 90%,
+      color-mix(in srgb, var(--orb-color-6) 20%, transparent),
+      transparent 58%
+    ),
+    var(--surface-background);
+}
+
+.projects__card:nth-child(2) {
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      color-mix(in srgb, var(--orb-color-7) 28%, transparent),
+      transparent 52%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      color-mix(in srgb, var(--orb-color-2) 20%, transparent),
+      transparent 58%
+    ),
+    var(--surface-background);
+}
+
+.projects__card:nth-child(3) {
+  background:
+    radial-gradient(
+      circle at 100% 5%,
+      color-mix(in srgb, var(--orb-color-3) 27%, transparent),
+      transparent 52%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      color-mix(in srgb, var(--orb-color-5) 19%, transparent),
+      transparent 58%
+    ),
+    var(--surface-background);
+}
+
 .projects__mockup {
   overflow: hidden;
   border: 1px solid var(--border-subtle);

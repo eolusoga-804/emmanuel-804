@@ -67,6 +67,96 @@
   box-shadow: 0 18px 44px var(--ambient-glow);
 }
 
+.services__card:nth-child(1) {
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      color-mix(in srgb, var(--orb-color-1) 30%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      color-mix(in srgb, var(--color-accent) 20%, transparent),
+      transparent 58%
+    ),
+    var(--surface-background);
+}
+
+.services__card:nth-child(2) {
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      color-mix(in srgb, var(--orb-color-6) 28%, transparent),
+      transparent 54%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      color-mix(in srgb, var(--color-secondary) 18%, transparent),
+      transparent 58%
+    ),
+    var(--surface-background);
+}
+
+.services__card:nth-child(3) {
+  background:
+    radial-gradient(
+      circle at 100% 15%,
+      color-mix(in srgb, var(--orb-color-2) 28%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      color-mix(in srgb, var(--orb-color-7) 22%, transparent),
+      transparent 58%
+    ),
+    var(--surface-background);
+}
+
+.services__card:nth-child(4) {
+  background:
+    radial-gradient(
+      circle at 0% 15%,
+      color-mix(in srgb, var(--orb-color-4) 27%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      color-mix(in srgb, var(--color-accent) 18%, transparent),
+      transparent 58%
+    ),
+    var(--surface-background);
+}
+
+.services__card:nth-child(5) {
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      color-mix(in srgb, var(--orb-color-5) 28%, transparent),
+      transparent 56%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      color-mix(in srgb, var(--color-secondary) 18%, transparent),
+      transparent 58%
+    ),
+    var(--surface-background);
+}
+
+.services__card:nth-child(6) {
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      color-mix(in srgb, var(--orb-color-3) 27%, transparent),
+      transparent 54%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      color-mix(in srgb, var(--orb-color-1) 20%, transparent),
+      transparent 58%
+    ),
+    var(--surface-background);
+}
+
 .services__number {
   display: inline-grid;
   min-width: 2.5rem;
