@@ -628,4 +628,12 @@ export const portfolioContent = {
     title: "By the numbers",
     numberLocale: "en",
   },
+
+  careerJourneySection: {
+    eyebrow: "Education & work",
+    title: "Career Journey",
+    intro:
+      "Education and professional experience from the supplied portfolio history.",
+    markerDigits: 2,
+  },
 } satisfies PortfolioContent;

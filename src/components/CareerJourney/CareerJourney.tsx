@@ -15,16 +15,17 @@ export default function CareerJourney() {
           data-aos="zoom-in"
           suppressHydrationWarning
         >
-          <p className={styles["career-journey__eyebrow"]}>Education & work</p>
+          <p className={styles["career-journey__eyebrow"]}>
+            {portfolioContent.careerJourneySection.eyebrow}
+          </p>
           <h2
             className={styles["career-journey__title"]}
             id="career-journey-title"
           >
-            Career Journey
+            {portfolioContent.careerJourneySection.title}
           </h2>
           <p className={styles["career-journey__intro"]}>
-            Education and professional experience from the supplied portfolio
-            history.
+            {portfolioContent.careerJourneySection.intro}
           </p>
         </header>
 
@@ -53,7 +54,10 @@ export default function CareerJourney() {
                 className={styles["career-journey__marker"]}
                 aria-hidden="true"
               >
-                {String(index + 1).padStart(2, "0")}
+                {String(index + 1).padStart(
+                  portfolioContent.careerJourneySection.markerDigits,
+                  "0",
+                )}
               </span>
             </li>
           ))}

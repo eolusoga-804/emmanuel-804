@@ -271,4 +271,10 @@ export type PortfolioContent = {
     title: string;
     numberLocale: string;
   };
+  careerJourneySection: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    markerDigits: number;
+  };
 };
