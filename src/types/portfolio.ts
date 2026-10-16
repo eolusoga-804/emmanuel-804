@@ -157,4 +157,35 @@ export type PortfolioContent = {
       href: string;
     }[];
   };
+  contactPage: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    form: {
+      nameLabel: string;
+      emailLabel: string;
+      serviceLabel: string;
+      servicePlaceholder: string;
+      messageLabel: string;
+      submitLabel: string;
+      notice: string;
+    };
+    details: {
+      ariaLabel: string;
+      emailLabel: string;
+      phoneLabel: string;
+      secondaryPhoneLabel: string;
+      whatsappLabel: string;
+      whatsappAction: string;
+      locationLabel: string;
+      socialsLabel: string;
+    };
+    emailDraft: {
+      subjectPrefix: string;
+      nameLabel: string;
+      emailLabel: string;
+      serviceLabel: string;
+      whatsappMessage: string;
+    };
+  };
 };

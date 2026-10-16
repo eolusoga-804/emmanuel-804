@@ -498,4 +498,37 @@ export const portfolioContent = {
       { label: "Contact", href: "/contact" },
     ],
   },
+
+  contactPage: {
+    eyebrow: "Contact",
+    title: "Let’s talk about your project",
+    intro: "Send a message or contact me through one of the channels below.",
+    form: {
+      nameLabel: "Name",
+      emailLabel: "Email",
+      serviceLabel: "Service",
+      servicePlaceholder: "Select a service",
+      messageLabel: "Message",
+      submitLabel: "Prepare email draft",
+      notice:
+        "Your email app should open with a draft. Send it there to complete your message.",
+    },
+    details: {
+      ariaLabel: "Other contact details",
+      emailLabel: "Email",
+      phoneLabel: "Phone",
+      secondaryPhoneLabel: "Second phone / WhatsApp",
+      whatsappLabel: "WhatsApp",
+      whatsappAction: "Start a conversation",
+      locationLabel: "Location",
+      socialsLabel: "Social links",
+    },
+    emailDraft: {
+      subjectPrefix: "Portfolio inquiry from",
+      nameLabel: "Name",
+      emailLabel: "Email",
+      serviceLabel: "Service",
+      whatsappMessage: "Hi Emmanuel, I’d like to discuss a project.",
+    },
+  },
 } satisfies PortfolioContent;

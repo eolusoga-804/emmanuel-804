@@ -5,13 +5,15 @@ import { portfolioContent } from "@/content/portfolio";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
+  const { contactPage } = portfolioContent;
+
   const [formNotice, setFormNotice] = useState("");
 
   const { contact } = portfolioContent;
   const phoneHref = contact.phone.replace(/[^\d+]/g, "");
   const secondaryPhoneHref = contact.secondaryPhone.replace(/[^\d+]/g, "");
   const whatsappHref = `${contact.whatsappUrl}?text=${encodeURIComponent(
-    "Hi Emmanuel, I’d like to discuss a project.",
+    contactPage.emailDraft.whatsappMessage,
   )}`;
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -23,14 +25,14 @@ export default function Contact() {
     const message = String(formData.get("message") ?? "").trim();
     const service = String(formData.get("service") ?? "").trim();
 
-    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
+    const subject = encodeURIComponent(
+      `${contactPage.emailDraft.subjectPrefix} ${name}`,
+    );
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nService: ${service}\n\n${message}`,
+      `${contactPage.emailDraft.nameLabel}: ${name}\n${contactPage.emailDraft.emailLabel}: ${email}\n${contactPage.emailDraft.serviceLabel}: ${service}\n\n${message}`,
     );
 
-    setFormNotice(
-      "Your email app should open with a draft. Send it there to complete your message.",
-    );
+    setFormNotice(contactPage.form.notice);
 
     window.location.href = `mailto:${contact.email}?subject=${subject}&body=${body}`;
   }
@@ -50,11 +52,9 @@ export default function Contact() {
         >
           <p className={styles["contact__eyebrow"]}>Contact</p>
           <h2 className={styles["contact__title"]} id="contact-title">
-            Let’s talk about your project
+            {contactPage.title}
           </h2>
-          <p className={styles["contact__intro"]}>
-            Send a message or contact me through one of the channels below.
-          </p>
+          <p className={styles["contact__intro"]}>{contactPage.intro}</p>
         </header>
 
         <div className={styles["contact__layout"]}>
@@ -64,7 +64,7 @@ export default function Contact() {
                 className={styles["contact__label"]}
                 htmlFor="contact-name"
               >
-                Name
+                {contactPage.form.nameLabel}
               </label>
               <input
                 className={styles["contact__input"]}
@@ -81,7 +81,7 @@ export default function Contact() {
                 className={styles["contact__label"]}
                 htmlFor="contact-email"
               >
-                Email
+                {contactPage.form.emailLabel}
               </label>
               <input
                 className={styles["contact__input"]}
@@ -98,7 +98,7 @@ export default function Contact() {
                 className={styles["contact__label"]}
                 htmlFor="contact-service"
               >
-                Service
+                {contactPage.form.serviceLabel}
               </label>
               <select
                 className={styles["contact__input"]}
@@ -108,7 +108,7 @@ export default function Contact() {
                 defaultValue=""
               >
                 <option value="" disabled>
-                  Select a service
+                  {contactPage.form.servicePlaceholder}
                 </option>
                 {portfolioContent.services.map((service) => (
                   <option key={service.title} value={service.title}>
@@ -123,7 +123,7 @@ export default function Contact() {
                 className={styles["contact__label"]}
                 htmlFor="contact-message"
               >
-                Message
+                {contactPage.form.messageLabel}
               </label>
               <textarea
                 className={styles["contact__textarea"]}
@@ -135,7 +135,7 @@ export default function Contact() {
             </div>
 
             <button className={styles["contact__submit"]} type="submit">
-              Prepare email draft
+              {contactPage.form.submitLabel}
             </button>
 
             <p
@@ -143,13 +143,13 @@ export default function Contact() {
               role="status"
               aria-live="polite"
             >
-              {formNotice}
+              {contactPage.form.notice}
             </p>
           </form>
 
           <aside
             className={styles["contact__details"]}
-            aria-label="Other contact details"
+            aria-label={contactPage.details.ariaLabel}
             data-aos="zoom-in"
             suppressHydrationWarning
           >
@@ -157,12 +157,16 @@ export default function Contact() {
               className={styles["contact__link"]}
               href={`mailto:${contact.email}`}
             >
-              <span className={styles["contact__link-label"]}>Email</span>
+              <span className={styles["contact__link-label"]}>
+                {contactPage.details.emailLabel}
+              </span>
               <span>{contact.email}</span>
             </a>
 
             <a className={styles["contact__link"]} href={`tel:${phoneHref}`}>
-              <span className={styles["contact__link-label"]}>Phone</span>
+              <span className={styles["contact__link-label"]}>
+                {contactPage.details.phoneLabel}
+              </span>
               <span>{contact.phone}</span>
             </a>
 
@@ -171,7 +175,7 @@ export default function Contact() {
               href={`tel:${secondaryPhoneHref}`}
             >
               <span className={styles["contact__link-label"]}>
-                Second phone / WhatsApp
+                {contactPage.details.secondaryPhoneLabel}
               </span>
               <span>{contact.secondaryPhone}</span>
             </a>
@@ -182,18 +186,22 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className={styles["contact__link-label"]}>WhatsApp</span>
-              <span>Start a conversation</span>
+              <span className={styles["contact__link-label"]}>
+                {contactPage.details.whatsappLabel}
+              </span>
+              <span>{contactPage.details.whatsappAction}</span>
             </a>
 
             <div className={styles["contact__location"]}>
-              <span className={styles["contact__link-label"]}>Location</span>
+              <span className={styles["contact__link-label"]}>
+                {contactPage.details.locationLabel}
+              </span>
               <span>{portfolioContent.identity.location}</span>
             </div>
 
             <nav
               className={styles["contact__socials"]}
-              aria-label="Social links"
+              aria-label={contactPage.details.socialsLabel}
             >
               {contact.links.map((link) =>
                 link.href ? (
