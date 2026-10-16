@@ -4,21 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { portfolioContent } from "@/content/portfolio";
 import styles from "./SiteNavigation.module.css";
 
-const navItems = [
-  { label: "About", href: "/#about" },
-  { label: "Skills", href: "/#skills" },
-  { label: "Services", href: "/#services" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Why Work With Me", href: "/#why-work-with-me" },
-  { label: "Development Philosophy", href: "/#development-philosophy" },
-  { label: "Workflow", href: "/#workflow" },
-  { label: "Statistics", href: "/#statistics" },
-  { label: "Career Journey", href: "/#career-journey" },
-  { label: "Testimonials", href: "/#testimonials" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Contact", href: "/contact" },
-];
-
 export default function SiteNavigation() {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -82,7 +67,7 @@ export default function SiteNavigation() {
         >
           <a
             className={styles["site-nav__brand"]}
-            href="/#home"
+            href={portfolioContent.navigation.brandHref}
             onClick={closePanel}
           >
             {portfolioContent.identity.displayName.toUpperCase()}
@@ -90,10 +75,10 @@ export default function SiteNavigation() {
 
           <nav
             className={styles["site-nav__desktop"]}
-            aria-label="Main navigation"
+            aria-label={portfolioContent.navigation.mainLabel}
           >
             <ul className={styles["site-nav__list"]}>
-              {navItems.map((item) => (
+              {portfolioContent.navigation.items.map((item) => (
                 <li key={item.href}>
                   <a className={styles["site-nav__link"]} href={item.href}>
                     {item.label}
@@ -108,7 +93,9 @@ export default function SiteNavigation() {
             className={styles["site-nav__menu-button"]}
             type="button"
             aria-label={
-              isPanelOpen ? "Close navigation menu" : "Open navigation menu"
+              isPanelOpen
+                ? portfolioContent.navigation.closeLabel
+                : portfolioContent.navigation.openLabel
             }
             aria-expanded={isPanelOpen}
             aria-controls="site-navigation-panel"
@@ -127,23 +114,23 @@ export default function SiteNavigation() {
             ref={panelRef}
             id="site-navigation-panel"
             className={styles["site-nav__panel"]}
-            aria-label="Navigation menu"
+            aria-label={portfolioContent.navigation.panelHeading}
           >
             <div className={styles["site-nav__panel-heading"]}>
-              <span>Navigate</span>
+              <span>{portfolioContent.navigation.panelHeading}</span>
               <button
                 className={styles["site-nav__close-button"]}
                 type="button"
-                aria-label="Close navigation menu"
+                aria-label={portfolioContent.navigation.closeLabel}
                 onClick={closePanel}
               >
                 ×
               </button>
             </div>
 
-            <nav aria-label="Mobile navigation">
+            <nav aria-label={portfolioContent.navigation.mobileLabel}>
               <ul className={styles["site-nav__panel-list"]}>
-                {navItems.map((item, index) => (
+                {portfolioContent.navigation.items.map((item, index) => (
                   <li key={item.href}>
                     <a
                       ref={index === 0 ? firstPanelLinkRef : undefined}
@@ -166,7 +153,7 @@ export default function SiteNavigation() {
 
             <div className={styles["site-nav__panel-contact"]}>
               <span className={styles["site-nav__availability"]}>
-                Available for work
+                {portfolioContent.navigation.availabilityLabel}
               </span>
             </div>
           </aside>

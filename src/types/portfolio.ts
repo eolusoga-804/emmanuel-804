@@ -134,4 +134,17 @@ export type PortfolioContent = {
     title: string;
     message: string;
   };
+  navigation: {
+    brandHref: string;
+    mainLabel: string;
+    mobileLabel: string;
+    panelHeading: string;
+    openLabel: string;
+    closeLabel: string;
+    availabilityLabel: string;
+    items: {
+      label: string;
+      href: string;
+    }[];
+  };
 };

@@ -457,10 +457,35 @@ export const portfolioContent = {
     termsLabel: "Terms and Conditions",
     privacyLabel: "Privacy Policy",
   },
+
   loadingScreen: {
     minimumDurationMs: 2200,
     eyebrow: "Portfolio",
     title: "Preparing the experience",
     message: "Loading portfolio content and interface…",
+  },
+
+  navigation: {
+    brandHref: "/#home",
+    mainLabel: "Main navigation",
+    mobileLabel: "Mobile navigation",
+    panelHeading: "Navigate",
+    openLabel: "Open navigation menu",
+    closeLabel: "Close navigation menu",
+    availabilityLabel: "Available for work",
+    items: [
+      { label: "About", href: "/#about" },
+      { label: "Skills", href: "/#skills" },
+      { label: "Services", href: "/#services" },
+      { label: "Projects", href: "/#projects" },
+      { label: "Why Work With Me", href: "/#why-work-with-me" },
+      { label: "Development Philosophy", href: "/#development-philosophy" },
+      { label: "Workflow", href: "/#workflow" },
+      { label: "Statistics", href: "/#statistics" },
+      { label: "Career Journey", href: "/#career-journey" },
+      { label: "Testimonials", href: "/#testimonials" },
+      { label: "FAQ", href: "/#faq" },
+      { label: "Contact", href: "/contact" },
+    ],
   },
 } satisfies PortfolioContent;
