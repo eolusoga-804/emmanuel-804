@@ -225,4 +225,10 @@ export type PortfolioContent = {
     title: string;
     intro: string;
   };
+  servicesSection: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    numberDigits: number;
+  };
 };

@@ -15,13 +15,14 @@ export default function Services() {
           data-aos="zoom-in"
           suppressHydrationWarning
         >
-          <p className={styles["services__eyebrow"]}>What I do</p>
+          <p className={styles["services__eyebrow"]}>
+            {portfolioContent.servicesSection.eyebrow}
+          </p>
           <h2 className={styles["services__title"]} id="services-title">
-            Services
+            {portfolioContent.servicesSection.title}
           </h2>
           <p className={styles["services__intro"]}>
-            Support across frontend development, user experience, and visual
-            design.
+            {portfolioContent.servicesSection.intro}
           </p>
         </header>
 
@@ -29,7 +30,10 @@ export default function Services() {
           {portfolioContent.services.map((service, index) => (
             <article className={styles["services__card"]} key={service.title}>
               <span className={styles["services__number"]} aria-hidden="true">
-                {String(index + 1).padStart(2, "0")}
+                {String(index + 1).padStart(
+                  portfolioContent.servicesSection.numberDigits,
+                  "0",
+                )}
               </span>
 
               <h3 className={styles["services__card-title"]}>

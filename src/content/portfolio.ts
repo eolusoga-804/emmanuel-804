@@ -572,4 +572,12 @@ export const portfolioContent = {
     intro:
       "Frontend technologies, design practices, and development tools from my professional background.",
   },
+
+  servicesSection: {
+    eyebrow: "What I do",
+    title: "Services",
+    intro:
+      "Support across frontend development, user experience, and visual design.",
+    numberDigits: 2,
+  },
 } satisfies PortfolioContent;
