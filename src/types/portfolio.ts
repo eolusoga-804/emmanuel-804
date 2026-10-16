@@ -116,6 +116,8 @@ export type PortfolioContent = {
         description: string;
       };
     };
+    openGraphLocale: string;
+    twitterCreator: string;
   };
   contactOutro: {
     eyebrow: string;

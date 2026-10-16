@@ -441,6 +441,8 @@ export const portfolioContent = {
           "Contact Emmanuel#804 in Lagos, Nigeria about frontend development, UI/UX design, or graphic design.",
       },
     },
+    openGraphLocale: "en_NG",
+    twitterCreator: "@eolusoga2",
   },
 
   contactOutro: {

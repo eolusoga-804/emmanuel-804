@@ -40,7 +40,7 @@ export function createPageMetadata(
     },
     openGraph: {
       type: "website",
-      locale: "en_NG",
+      locale: seo.openGraphLocale,
       url: canonicalUrl,
       siteName: identity.displayName,
       title,
@@ -48,7 +48,7 @@ export function createPageMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      creator: "@eolusoga2",
+      creator: seo.twitterCreator,
       title,
       description,
     },
