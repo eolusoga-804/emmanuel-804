@@ -660,4 +660,23 @@ export const portfolioContent = {
     intro: "Details about my services, availability, and portfolio.",
     accordionName: "faq-items",
   },
+
+  notFoundPage: {
+    watermark: "404",
+    eyebrow: "Route not found",
+    codeLabel: "404 error",
+    title: "We couldn’t find that page.",
+    message:
+      "The address may be incorrect, or the page may have moved. Choose somewhere below to get back on track.",
+    navigationLabel: "Where to go next",
+    homeLabel: "Back to home",
+    homeHref: "/",
+    projectsLabel: "Explore projects",
+    projectsHref: "/projects",
+    contactLabel: "Contact Emmanuel",
+    contactHref: "/contact",
+    hint: "Check the URL for a typo, or use one of the links above.",
+    metadataTitle: "Page Not Found | Emmanuel#804",
+    metadataDescription: "The page you requested could not be found.",
+  },
 } satisfies PortfolioContent;

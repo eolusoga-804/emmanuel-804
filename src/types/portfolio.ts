@@ -298,4 +298,21 @@ export type PortfolioContent = {
     intro: string;
     accordionName: string;
   };
+  notFoundPage: {
+    watermark: string;
+    eyebrow: string;
+    codeLabel: string;
+    title: string;
+    message: string;
+    navigationLabel: string;
+    homeLabel: string;
+    homeHref: string;
+    projectsLabel: string;
+    projectsHref: string;
+    contactLabel: string;
+    contactHref: string;
+    hint: string;
+    metadataTitle: string;
+    metadataDescription: string;
+  };
 };

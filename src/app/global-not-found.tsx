@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
+import { portfolioContent } from "@/content/portfolio";
 import NotFoundPage from "@/components/NotFoundPage/NotFoundPage";
 import "./globals.css";
 
@@ -15,8 +16,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Page Not Found | Emmanuel#804",
-  description: "The page you requested could not be found.",
+  title: `${portfolioContent.notFoundPage.metadataTitle}`,
+  description: `${portfolioContent.notFoundPage.metadataDescription}`,
 };
 
 export default function GlobalNotFound() {
