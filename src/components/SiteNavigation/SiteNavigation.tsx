@@ -5,11 +5,17 @@ import { portfolioContent } from "@/content/portfolio";
 import styles from "./SiteNavigation.module.css";
 
 const navItems = [
-  { label: "Home", href: "/#home" },
   { label: "About", href: "/#about" },
   { label: "Skills", href: "/#skills" },
   { label: "Services", href: "/#services" },
-  { label: "Projects", href: "/projects" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Why Work With Me", href: "/#why-work-with-me" },
+  { label: "Development Philosophy", href: "/#development-philosophy" },
+  { label: "Workflow", href: "/#workflow" },
+  { label: "Statistics", href: "/#statistics" },
+  { label: "Career Journey", href: "/#career-journey" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -145,6 +151,12 @@ export default function SiteNavigation() {
                       href={item.href}
                       onClick={closePanel}
                     >
+                      <span
+                        className={styles["site-nav__panel-number"]}
+                        aria-hidden="true"
+                      >
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
                       {item.label}
                     </a>
                   </li>
@@ -156,9 +168,6 @@ export default function SiteNavigation() {
               <span className={styles["site-nav__availability"]}>
                 Available for work
               </span>
-              <a href={`mailto:${portfolioContent.contact.email}`}>
-                {portfolioContent.contact.email}
-              </a>
             </div>
           </aside>
         </>
