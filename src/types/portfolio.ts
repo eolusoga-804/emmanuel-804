@@ -220,4 +220,9 @@ export type PortfolioContent = {
     certificatesLanguagesSlideTitle: string;
     languageListPrefix: string;
   };
+  skillsSection: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+  };
 };

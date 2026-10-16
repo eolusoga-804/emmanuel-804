@@ -15,13 +15,14 @@ export default function Skills() {
           data-aos="zoom-in"
           suppressHydrationWarning
         >
-          <p className={styles["skills__eyebrow"]}>Skills & toolkit</p>
+          <p className={styles["skills__eyebrow"]}>
+            {portfolioContent.skillsSection.eyebrow}
+          </p>
           <h2 className={styles["skills__title"]} id="skills-title">
-            The tools behind the work
+            {portfolioContent.skillsSection.title}
           </h2>
           <p className={styles["skills__intro"]}>
-            Frontend technologies, design practices, and development tools from
-            my professional background.
+            {portfolioContent.skillsSection.intro}
           </p>
         </header>
 

@@ -565,4 +565,11 @@ export const portfolioContent = {
     certificatesLanguagesSlideTitle: "Certificates and Languages",
     languageListPrefix: "Languages:",
   },
+
+  skillsSection: {
+    eyebrow: "Skills & toolkit",
+    title: "The tools behind the work",
+    intro:
+      "Frontend technologies, design practices, and development tools from my professional background.",
+  },
 } satisfies PortfolioContent;
