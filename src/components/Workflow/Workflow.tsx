@@ -6,6 +6,7 @@ export default function Workflow() {
     <section
       className={styles.workflow}
       id="workflow"
+      data-section-spacing="standard"
       aria-labelledby="workflow-title"
     >
       <div className={styles["workflow__content"]}>

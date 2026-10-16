@@ -6,6 +6,7 @@ export default function WhyWorkWithMe() {
     <section
       className={styles["why-work"]}
       id="why-work-with-me"
+      data-section-spacing="standard"
       aria-labelledby="why-work-title"
     >
       <div className={styles["why-work__content"]}>

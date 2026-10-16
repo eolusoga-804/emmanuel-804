@@ -6,7 +6,7 @@ export default function ContactPageOutro() {
   const subject = encodeURIComponent("Let's build something together");
 
   return (
-    <section className={styles.outro} aria-labelledby="contact-outro-title">
+    <section className={styles.outro} data-section-spacing="contact-outro" aria-labelledby="contact-outro-title">
       <div className={styles["outro__panel"]}>
         <span className={styles["outro__spark"]} aria-hidden="true">
           ✳

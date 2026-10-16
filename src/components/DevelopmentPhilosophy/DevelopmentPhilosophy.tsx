@@ -6,6 +6,7 @@ export default function DevelopmentPhilosophy() {
     <section
       className={styles.philosophy}
       id="development-philosophy"
+      data-section-spacing="standard"
       aria-labelledby="philosophy-title"
     >
       <div className={styles["philosophy__layout"]}>

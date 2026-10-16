@@ -48,7 +48,12 @@ export default function About() {
   };
 
   return (
-    <section className={styles.about} id="about" aria-labelledby="about-title">
+    <section
+      className={styles.about}
+      id="about"
+      data-section-spacing="about"
+      aria-labelledby="about-title"
+    >
       <div className={styles["about__layout"]}>
         <figure className={styles["about__portrait"]}>
           <div className={styles["about__portrait-frame"]}>

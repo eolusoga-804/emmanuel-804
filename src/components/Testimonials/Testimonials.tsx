@@ -17,6 +17,7 @@ export default function Testimonials() {
       <section
         className={styles.testimonials}
         id="testimonials"
+        data-section-spacing="standard"
         aria-labelledby="testimonials-title"
       >
         <div className={styles["testimonials__content"]}>
@@ -73,6 +74,7 @@ export default function Testimonials() {
     <section
       className={styles.testimonials}
       id="testimonials"
+      data-section-spacing="standard"
       aria-labelledby="testimonials-title"
     >
       <div className={styles["testimonials__content"]}>

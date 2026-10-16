@@ -11,6 +11,7 @@ export default function Statistics() {
     <section
       className={styles.statistics}
       id="statistics"
+      data-section-spacing="standard"
       aria-labelledby="statistics-title"
     >
       <div className={styles["statistics__content"]}>

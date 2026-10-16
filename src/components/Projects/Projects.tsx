@@ -11,6 +11,7 @@ export default function Projects() {
     <section
       className={styles.projects}
       id="projects"
+      data-section-spacing="standard"
       aria-labelledby="projects-title"
     >
       <div className={styles["projects__content"]}>

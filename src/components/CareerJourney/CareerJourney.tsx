@@ -6,6 +6,7 @@ export default function CareerJourney() {
     <section
       className={styles["career-journey"]}
       id="career-journey"
+      data-section-spacing="standard"
       aria-labelledby="career-journey-title"
     >
       <div className={styles["career-journey__content"]}>

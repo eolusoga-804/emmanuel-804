@@ -48,7 +48,11 @@ export default function Hero() {
   const visibleTitle = titles[titleIndex].slice(0, visibleCharacters);
 
   return (
-    <section className={styles.hero} aria-labelledby="hero-title">
+    <section
+      className={styles.hero}
+      data-section-spacing="hero"
+      aria-labelledby="hero-title"
+    >
       <div className={styles["hero__content"]}>
         <p className={styles["hero__eyebrow"]}>
           <span

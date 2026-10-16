@@ -39,6 +39,7 @@ export default function Contact() {
     <section
       className={styles.contact}
       id="contact"
+      data-section-spacing="standard"
       aria-labelledby="contact-title"
     >
       <div className={styles["contact__content"]}>

@@ -3,7 +3,12 @@ import styles from "./FAQ.module.css";
 
 export default function FAQ() {
   return (
-    <section className={styles.faq} id="faq" aria-labelledby="faq-title">
+    <section
+      className={styles.faq}
+      id="faq"
+      data-section-spacing="standard"
+      aria-labelledby="faq-title"
+    >
       <div className={styles["faq__content"]}>
         <header
           className={styles["faq__header"]}

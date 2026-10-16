@@ -6,6 +6,7 @@ export default function Services() {
     <section
       className={styles.services}
       id="services"
+      data-section-spacing="standard"
       aria-labelledby="services-title"
     >
       <div className={styles["services__content"]}>

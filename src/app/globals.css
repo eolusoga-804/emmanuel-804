@@ -139,6 +139,24 @@ a {
   min-height: 100vh;
 }
 
+@media (min-width: 1024px) {
+  section[data-section-spacing="standard"] {
+    padding-block: clamp(1.333rem, 2.667vw, 2rem);
+  }
+
+  section[data-section-spacing="about"] {
+    padding-block: clamp(1.333rem, 2.667vw, 2.333rem);
+  }
+
+  section[data-section-spacing="hero"] {
+    padding-block: 2.5rem 1.667rem;
+  }
+
+  section[data-section-spacing="contact-outro"] {
+    padding-block: 0 clamp(0.667rem, 1.667vw, 1.333rem);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

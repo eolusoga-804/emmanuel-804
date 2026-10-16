@@ -6,6 +6,7 @@ export default function Skills() {
     <section
       className={styles.skills}
       id="skills"
+      data-section-spacing="standard"
       aria-labelledby="skills-title"
     >
       <div className={styles["skills__content"]}>
