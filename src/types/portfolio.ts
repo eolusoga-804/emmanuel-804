@@ -315,4 +315,12 @@ export type PortfolioContent = {
     metadataTitle: string;
     metadataDescription: string;
   };
+  floatingControls: {
+    themeStorageKey: string;
+    themeLabelTemplate: string;
+    whatsappLabel: string;
+    whatsappMessage: string;
+    backToTopLabelTemplate: string;
+    backToTopThresholdPercent: number;
+  };
 };

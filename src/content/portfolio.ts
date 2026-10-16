@@ -679,4 +679,13 @@ export const portfolioContent = {
     metadataTitle: "Page Not Found | Emmanuel#804",
     metadataDescription: "The page you requested could not be found.",
   },
+
+  floatingControls: {
+    themeStorageKey: "emmanuel804-theme",
+    themeLabelTemplate: "Switch to {theme} theme",
+    whatsappLabel: "Contact Emmanuel on WhatsApp",
+    whatsappMessage: "Hi Emmanuel, I’d like to discuss working with you.",
+    backToTopLabelTemplate: "Back to top, {progress}% scrolled",
+    backToTopThresholdPercent: 0.5,
+  },
 } satisfies PortfolioContent;

@@ -52,7 +52,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <Script id="theme-init" strategy="beforeInteractive">
           {`try {
-            const savedTheme = localStorage.getItem("emmanuel804-theme");
+            const savedTheme = localStorage.getItem("${portfolioContent.floatingControls.themeStorageKey}");
             if (savedTheme === "light" || savedTheme === "dark") {
               document.documentElement.dataset.theme = savedTheme;
             }

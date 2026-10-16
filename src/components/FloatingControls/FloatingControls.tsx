@@ -10,7 +10,7 @@ import styles from "./FloatingControls.module.css";
 type Theme = "light" | "dark";
 
 const whatsappMessage = encodeURIComponent(
-  "Hi Emmanuel, I’d like to discuss working with you.",
+  portfolioContent.floatingControls.whatsappMessage,
 );
 
 export default function FloatingControls() {
@@ -18,7 +18,9 @@ export default function FloatingControls() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    const savedTheme = window.localStorage.getItem("emmanuel804-theme");
+    const savedTheme = window.localStorage.getItem(
+      portfolioContent.floatingControls.themeStorageKey,
+    );
     const initialTheme: Theme = savedTheme === "dark" ? "dark" : "light";
 
     document.documentElement.dataset.theme = initialTheme;
@@ -57,7 +59,10 @@ export default function FloatingControls() {
     const nextTheme = theme === "light" ? "dark" : "light";
 
     document.documentElement.dataset.theme = nextTheme;
-    window.localStorage.setItem("emmanuel804-theme", nextTheme);
+    window.localStorage.setItem(
+      portfolioContent.floatingControls.themeStorageKey,
+      nextTheme,
+    );
     setTheme(nextTheme);
   };
 
@@ -81,7 +86,10 @@ export default function FloatingControls() {
       <button
         className={styles["floating-controls__button"]}
         type="button"
-        aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
+        aria-label={portfolioContent.floatingControls.themeLabelTemplate.replace(
+          "{theme}",
+          theme,
+        )}
         aria-pressed={theme === "dark"}
         onClick={toggleTheme}
       >
@@ -96,7 +104,7 @@ export default function FloatingControls() {
         href={`${portfolioContent.contact.whatsappUrl}?text=${whatsappMessage}`}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Contact Emmanuel on WhatsApp"
+        aria-label={portfolioContent.floatingControls.whatsappLabel}
       >
         <FontAwesomeIcon icon={faWhatsapp} aria-hidden="true" />
       </a>
@@ -105,9 +113,15 @@ export default function FloatingControls() {
         className={`${styles["floating-controls__button"]} ${styles["floating-controls__progress"]}`}
         style={progressStyle}
         type="button"
-        aria-label={`Back to top, ${Math.round(scrollProgress)}% scrolled`}
+        aria-label={portfolioContent.floatingControls.backToTopLabelTemplate.replace(
+          "{progress}",
+          String(Math.round(scrollProgress)),
+        )}
         onClick={scrollToTop}
-        disabled={scrollProgress < 0.5}
+        disabled={
+          scrollProgress <
+          portfolioContent.floatingControls.backToTopThresholdPercent
+        }
       >
         <span aria-hidden="true">↑</span>
       </button>
