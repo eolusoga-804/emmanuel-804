@@ -9,7 +9,11 @@ export default function DevelopmentPhilosophy() {
       aria-labelledby="philosophy-title"
     >
       <div className={styles["philosophy__layout"]}>
-        <header className={styles["philosophy__panel"]} data-aos="zoom-in">
+        <header
+          className={styles["philosophy__panel"]}
+          data-aos="zoom-in"
+          suppressHydrationWarning
+        >
           <p className={styles["philosophy__eyebrow"]}>How I work</p>
           <h2 className={styles["philosophy__title"]} id="philosophy-title">
             Development Philosophy

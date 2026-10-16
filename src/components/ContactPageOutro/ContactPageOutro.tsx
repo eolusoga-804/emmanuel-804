@@ -12,7 +12,11 @@ export default function ContactPageOutro() {
           ✳
         </span>
 
-        <header className={styles["outro__header"]} data-aos="zoom-in">
+        <header
+          className={styles["outro__header"]}
+          data-aos="zoom-in"
+          suppressHydrationWarning
+        >
           <p className={styles["outro__eyebrow"]}>{contactOutro.eyebrow}</p>
           <h2 className={styles["outro__title"]} id="contact-outro-title">
             {contactOutro.title}

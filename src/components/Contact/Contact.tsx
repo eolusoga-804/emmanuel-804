@@ -42,7 +42,11 @@ export default function Contact() {
       aria-labelledby="contact-title"
     >
       <div className={styles["contact__content"]}>
-        <header className={styles["contact__header"]} data-aos="zoom-in">
+        <header
+          className={styles["contact__header"]}
+          data-aos="zoom-in"
+          suppressHydrationWarning
+        >
           <p className={styles["contact__eyebrow"]}>Contact</p>
           <h2 className={styles["contact__title"]} id="contact-title">
             Let’s talk about your project
@@ -146,6 +150,7 @@ export default function Contact() {
             className={styles["contact__details"]}
             aria-label="Other contact details"
             data-aos="zoom-in"
+            suppressHydrationWarning
           >
             <a
               className={styles["contact__link"]}

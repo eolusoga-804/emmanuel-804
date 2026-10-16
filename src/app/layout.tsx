@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { portfolioContent } from "@/content/portfolio";
 import { createPageMetadata } from "@/content/metadata";
 import { Inter, Poppins } from "next/font/google";
@@ -44,9 +45,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       data-theme="light"
+      suppressHydrationWarning
       className={`${inter.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`try {
+            const savedTheme = localStorage.getItem("emmanuel804-theme");
+            if (savedTheme === "light" || savedTheme === "dark") {
+              document.documentElement.dataset.theme = savedTheme;
+            }
+          } catch {
+            // Keep the default light theme when storage is unavailable.
+          }`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

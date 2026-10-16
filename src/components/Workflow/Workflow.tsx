@@ -9,7 +9,11 @@ export default function Workflow() {
       aria-labelledby="workflow-title"
     >
       <div className={styles["workflow__content"]}>
-        <header className={styles["workflow__header"]} data-aos="zoom-in">
+        <header
+          className={styles["workflow__header"]}
+          data-aos="zoom-in"
+          suppressHydrationWarning
+        >
           <p className={styles["workflow__eyebrow"]}>From brief to delivery</p>
           <h2 className={styles["workflow__title"]} id="workflow-title">
             Workflow

@@ -61,7 +61,11 @@ export default function About() {
             />
           </div>
 
-          <figcaption className={styles["about__caption"]} data-aos="zoom-in">
+          <figcaption
+            className={styles["about__caption"]}
+            data-aos="zoom-in"
+            suppressHydrationWarning
+          >
             <strong>{portfolioContent.identity.fullName}</strong>
             <span>{portfolioContent.identity.location}</span>
           </figcaption>

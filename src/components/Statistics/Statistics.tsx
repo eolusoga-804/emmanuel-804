@@ -14,7 +14,11 @@ export default function Statistics() {
       aria-labelledby="statistics-title"
     >
       <div className={styles["statistics__content"]}>
-        <header className={styles["statistics__header"]} data-aos="zoom-in">
+        <header
+          className={styles["statistics__header"]}
+          data-aos="zoom-in"
+          suppressHydrationWarning
+        >
           <p className={styles["statistics__eyebrow"]}>At a glance</p>
           <h2 className={styles["statistics__title"]} id="statistics-title">
             By the numbers

@@ -9,7 +9,11 @@ export default function CareerJourney() {
       aria-labelledby="career-journey-title"
     >
       <div className={styles["career-journey__content"]}>
-        <header className={styles["career-journey__header"]} data-aos="zoom-in">
+        <header
+          className={styles["career-journey__header"]}
+          data-aos="zoom-in"
+          suppressHydrationWarning
+        >
           <p className={styles["career-journey__eyebrow"]}>Education & work</p>
           <h2
             className={styles["career-journey__title"]}

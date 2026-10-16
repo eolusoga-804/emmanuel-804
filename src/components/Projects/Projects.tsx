@@ -14,7 +14,11 @@ export default function Projects() {
       aria-labelledby="projects-title"
     >
       <div className={styles["projects__content"]}>
-        <header className={styles["projects__header"]} data-aos="zoom-in">
+        <header
+          className={styles["projects__header"]}
+          data-aos="zoom-in"
+          suppressHydrationWarning
+        >
           <p className={styles["projects__eyebrow"]}>Selected work</p>
           <h2 className={styles["projects__title"]} id="projects-title">
             Projects
