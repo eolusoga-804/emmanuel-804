@@ -457,4 +457,10 @@ export const portfolioContent = {
     termsLabel: "Terms and Conditions",
     privacyLabel: "Privacy Policy",
   },
+  loadingScreen: {
+    minimumDurationMs: 2200,
+    eyebrow: "Portfolio",
+    title: "Preparing the experience",
+    message: "Loading portfolio content and interface…",
+  },
 } satisfies PortfolioContent;

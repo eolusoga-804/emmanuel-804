@@ -128,4 +128,10 @@ export type PortfolioContent = {
     termsLabel: string;
     privacyLabel: string;
   };
+  loadingScreen: {
+    minimumDurationMs: number;
+    eyebrow: string;
+    title: string;
+    message: string;
+  };
 };
