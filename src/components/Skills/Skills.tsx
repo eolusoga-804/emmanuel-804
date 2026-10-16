@@ -29,6 +29,7 @@ export default function Skills() {
           {portfolioContent.skillsMarquees.map((group, groupIndex) => (
             <section
               className={styles["skills__group"]}
+              data-hover-surface="true"
               key={group.title}
               aria-labelledby={`skills-group-${groupIndex}`}
             >

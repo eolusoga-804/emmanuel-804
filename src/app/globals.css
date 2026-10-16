@@ -157,6 +157,87 @@ a {
   }
 }
 
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  :where(
+    a,
+    button,
+    summary,
+    input,
+    select,
+    textarea,
+    [role="button"],
+    [role="link"]
+  ) {
+    transition:
+      color 180ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease,
+      box-shadow 180ms ease,
+      transform 180ms ease,
+      filter 180ms ease;
+  }
+
+  :where(a, button, summary, [role="button"], [role="link"]):hover:not(
+      :disabled
+    ) {
+    filter: brightness(1.06);
+  }
+
+  :where(input, select, textarea):hover {
+    border-color: var(--color-accent);
+  }
+
+  :where(
+    a,
+    button,
+    summary,
+    input,
+    select,
+    textarea,
+    [role="button"],
+    [role="link"]
+  ):focus-visible {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 3px;
+  }
+
+  :where(article, details, section[data-hover-surface="true"]) {
+    transition:
+      border-color 180ms ease,
+      background-color 180ms ease,
+      box-shadow 180ms ease,
+      transform 180ms ease;
+  }
+
+  :where(article, details, section[data-hover-surface="true"]):hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 14px 36px var(--ambient-glow);
+    transform: translateY(-2px);
+  }
+}
+
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: reduce) {
+  :where(
+    a,
+    button,
+    summary,
+    input,
+    select,
+    textarea,
+    [role="button"],
+    [role="link"],
+    article,
+    details,
+    section[data-hover-surface="true"]
+  ) {
+    transition: none;
+  }
+
+  :where(article, details, section[data-hover-surface="true"]):hover {
+    transform: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
