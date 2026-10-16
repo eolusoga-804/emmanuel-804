@@ -26,12 +26,14 @@ export default function Testimonials() {
             data-aos="zoom-in"
             suppressHydrationWarning
           >
-            <p className={styles["testimonials__eyebrow"]}>Feedback</p>
+            <p className={styles["testimonials__eyebrow"]}>
+              {portfolioContent.testimonialSection.eyebrow}
+            </p>
             <h2
               className={styles["testimonials__title"]}
               id="testimonials-title"
             >
-              Testimonials
+              {portfolioContent.testimonialSection.title}
             </h2>
           </header>
 
@@ -43,13 +45,16 @@ export default function Testimonials() {
               “
             </span>
             <p className={styles["testimonials__empty-title"]}>
-              This space is ready for feedback.
+              {portfolioContent.testimonialSection.emptyTitle}
             </p>
             <p className={styles["testimonials__empty-copy"]}>
-              Testimonials will appear here when approved feedback is available.
+              {portfolioContent.testimonialSection.emptyMessage}
             </p>
-            <a className={styles["testimonials__contact-link"]} href="/contact">
-              Get in touch
+            <a
+              className={styles["testimonials__contact-link"]}
+              href={portfolioContent.testimonialSection.contactHref}
+            >
+              {portfolioContent.testimonialSection.contactAction}
               <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -83,9 +88,11 @@ export default function Testimonials() {
           data-aos="zoom-in"
           suppressHydrationWarning
         >
-          <p className={styles["testimonials__eyebrow"]}>Feedback</p>
+          <p className={styles["testimonials__eyebrow"]}>
+            {portfolioContent.testimonialSection.eyebrow}
+          </p>
           <h2 className={styles["testimonials__title"]} id="testimonials-title">
-            Testimonials
+            {portfolioContent.testimonialSection.title}
           </h2>
         </header>
 
@@ -93,13 +100,15 @@ export default function Testimonials() {
           className={styles["testimonials__carousel"]}
           role="region"
           aria-roledescription="carousel"
-          aria-label="Client and collaborator testimonials"
+          aria-label={portfolioContent.testimonialSection.carouselLabel}
         >
           <article
             className={styles["testimonials__slide"]}
             role="group"
             aria-roledescription="slide"
-            aria-label={`${activeIndex + 1} of ${testimonials.length}`}
+            aria-label={portfolioContent.testimonialSection.slidePositionTemplate
+              .replace("{current}", String(activeIndex + 1))
+              .replace("{total}", String(testimonials.length))}
             aria-live="polite"
           >
             <div className={styles["testimonials__author"]}>
@@ -107,7 +116,10 @@ export default function Testimonials() {
                 <Image
                   className={styles["testimonials__image"]}
                   src={activeTestimonial.image}
-                  alt={`Portrait of ${activeTestimonial.author}`}
+                  alt={`${portfolioContent.testimonialSection.portraitAltTemplate.replace(
+                    "{author}",
+                    activeTestimonial.author,
+                  )}`}
                   width={72}
                   height={72}
                 />
@@ -139,7 +151,7 @@ export default function Testimonials() {
             <button
               className={styles["testimonials__arrow"]}
               type="button"
-              aria-label="Previous testimonial"
+              aria-label={`${portfolioContent.testimonialSection.previousLabel}`}
               onClick={showPrevious}
             >
               <span aria-hidden="true">←</span>
@@ -148,7 +160,9 @@ export default function Testimonials() {
             <div
               className={styles["testimonials__indicators"]}
               role="group"
-              aria-label="Choose a testimonial"
+              aria-label={
+                portfolioContent.testimonialSection.indicatorGroupLabel
+              }
             >
               {testimonials.map((testimonial, index) => (
                 <button
@@ -159,7 +173,10 @@ export default function Testimonials() {
                   }`}
                   key={`${testimonial.author}-${testimonial.organization}`}
                   type="button"
-                  aria-label={`Show testimonial from ${testimonial.author}`}
+                  aria-label={portfolioContent.testimonialSection.indicatorLabelTemplate.replace(
+                    "{author}",
+                    testimonial.author,
+                  )}
                   aria-pressed={index === activeIndex}
                   onClick={() => setActiveIndex(index)}
                 />
@@ -169,7 +186,7 @@ export default function Testimonials() {
             <button
               className={styles["testimonials__arrow"]}
               type="button"
-              aria-label="Next testimonial"
+              aria-label={portfolioContent.testimonialSection.nextLabel}
               onClick={showNext}
             >
               <span aria-hidden="true">→</span>

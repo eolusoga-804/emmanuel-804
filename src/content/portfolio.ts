@@ -636,4 +636,21 @@ export const portfolioContent = {
       "Education and professional experience from the supplied portfolio history.",
     markerDigits: 2,
   },
+
+  testimonialSection: {
+    eyebrow: "Feedback",
+    title: "Testimonials",
+    emptyTitle: "This space is ready for feedback.",
+    emptyMessage:
+      "Testimonials will appear here when approved feedback is available.",
+    contactAction: "Get in touch",
+    contactHref: "/contact",
+    carouselLabel: "Client and collaborator testimonials",
+    previousLabel: "Previous testimonial",
+    nextLabel: "Next testimonial",
+    indicatorGroupLabel: "Choose a testimonial",
+    indicatorLabelTemplate: "Show testimonial from {author}",
+    slidePositionTemplate: "{current} of {total}",
+    portraitAltTemplate: "Portrait of {author}",
+  },
 } satisfies PortfolioContent;

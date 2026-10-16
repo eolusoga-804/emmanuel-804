@@ -277,4 +277,19 @@ export type PortfolioContent = {
     intro: string;
     markerDigits: number;
   };
+  testimonialSection: {
+    eyebrow: string;
+    title: string;
+    emptyTitle: string;
+    emptyMessage: string;
+    contactAction: string;
+    contactHref: string;
+    carouselLabel: string;
+    previousLabel: string;
+    nextLabel: string;
+    indicatorGroupLabel: string;
+    indicatorLabelTemplate: string;
+    slidePositionTemplate: string;
+    portraitAltTemplate: string;
+  };
 };
