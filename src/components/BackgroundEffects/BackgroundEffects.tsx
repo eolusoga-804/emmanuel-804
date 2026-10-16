@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { portfolioContent } from "@/content/portfolio";
 import styles from "./BackgroundEffects.module.css";
 
 const orbClasses = [
@@ -26,9 +27,6 @@ const ornamentClasses = [
   styles["background-effects__ornament--ten"],
   styles["background-effects__ornament--eleven"],
 ];
-
-// These symbols are decorative and hidden from assistive technology.
-const ornaments = ["✦", "◇", "⌘", "⬡", "△", "✧", "◉", "↗", "⌁", "⬟", "▦"];
 
 export default function BackgroundEffects() {
   const pointerGlowRef = useRef<HTMLDivElement>(null);
@@ -98,14 +96,16 @@ export default function BackgroundEffects() {
       </div>
 
       <div className={styles["background-effects__ornaments"]}>
-        {ornaments.map((ornament, index) => (
-          <span
-            key={`ornament-${index + 1}`}
-            className={`${styles["background-effects__ornament"]} ${ornamentClasses[index]}`}
-          >
-            {ornament}
-          </span>
-        ))}
+        {portfolioContent.backgroundEffects.ornamentSymbols.map(
+          (ornament, index) => (
+            <span
+              key={`ornament-${index + 1}`}
+              className={`${styles["background-effects__ornament"]} ${ornamentClasses[index]}`}
+            >
+              {ornament}
+            </span>
+          ),
+        )}
       </div>
 
       <div

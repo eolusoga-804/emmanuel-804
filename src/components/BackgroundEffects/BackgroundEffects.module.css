@@ -4,6 +4,17 @@
   inset: 0;
   overflow: hidden;
   pointer-events: none;
+
+  --background-duration-2s: 2s;
+  --background-duration-3s: 3s;
+  --background-duration-4s: 4s;
+  --background-duration-5s: 5s;
+  --background-duration-7s: 7s;
+  --background-duration-8s: 8s;
+  --background-duration-9s: 9s;
+  --background-duration-10s: 10s;
+  --background-duration-11s: 11s;
+  --background-duration-12s: 12s;
 }
 
 .background-effects__grid {
@@ -15,7 +26,7 @@
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 54px 54px;
   mask-image: radial-gradient(ellipse at center, #000 15%, transparent 78%);
-  animation: grid-drift 12s linear infinite;
+  animation: grid-drift var(--background-duration-12s) linear infinite;
 }
 
 [data-theme="dark"] .background-effects__grid {
@@ -44,49 +55,56 @@
   top: -12%;
   left: -8%;
   background: var(--orb-color-1);
-  animation: orb-one 7s ease-in-out infinite alternate;
+  animation: orb-one var(--background-duration-7s) ease-in-out infinite
+    alternate;
 }
 
 .background-effects__orb--two {
   top: 12%;
   right: -12%;
   background: var(--orb-color-2);
-  animation: orb-two 10s ease-in-out infinite alternate;
+  animation: orb-two var(--background-duration-10s) ease-in-out infinite
+    alternate;
 }
 
 .background-effects__orb--three {
   top: 38%;
   left: 22%;
   background: var(--orb-color-3);
-  animation: orb-three 8s ease-in-out infinite alternate;
+  animation: orb-three var(--background-duration-8s) ease-in-out infinite
+    alternate;
 }
 
 .background-effects__orb--four {
   right: 17%;
   bottom: -22%;
   background: var(--orb-color-4);
-  animation: orb-four 11s ease-in-out infinite alternate;
+  animation: orb-four var(--background-duration-11s) ease-in-out infinite
+    alternate;
 }
 
 .background-effects__orb--five {
   bottom: 4%;
   left: -14%;
   background: var(--orb-color-5);
-  animation: orb-five 9s ease-in-out infinite alternate;
+  animation: orb-five var(--background-duration-9s) ease-in-out infinite
+    alternate;
 }
 
 .background-effects__orb--six {
   top: -20%;
   left: 48%;
   background: var(--orb-color-6);
-  animation: orb-six 12s ease-in-out infinite alternate;
+  animation: orb-six var(--background-duration-12s) ease-in-out infinite
+    alternate;
 }
 
 .background-effects__orb--seven {
   right: 33%;
   bottom: 8%;
   background: var(--orb-color-7);
-  animation: orb-seven 7s ease-in-out infinite alternate;
+  animation: orb-seven var(--background-duration-7s) ease-in-out infinite
+    alternate;
 }
 
 .background-effects__ornaments {
@@ -105,67 +123,71 @@
 .background-effects__ornament--one {
   top: 13%;
   left: 8%;
-  animation: ornament-float 2s ease-in-out infinite;
+  animation: ornament-float var(--background-duration-2s) ease-in-out infinite;
 }
 
 .background-effects__ornament--two {
   top: 25%;
   left: 27%;
-  animation: ornament-turn 3s ease-in-out infinite;
+  animation: ornament-turn var(--background-duration-3s) ease-in-out infinite;
 }
 
 .background-effects__ornament--three {
   top: 9%;
   right: 22%;
-  animation: ornament-bounce 3s ease-in-out infinite;
+  animation: ornament-bounce var(--background-duration-3s) ease-in-out infinite;
 }
 
 .background-effects__ornament--four {
   top: 44%;
   right: 8%;
-  animation: ornament-slide 12s ease-in-out infinite;
+  animation: ornament-slide var(--background-duration-12s) ease-in-out infinite;
 }
 
 .background-effects__ornament--five {
   top: 62%;
   left: 12%;
-  animation: ornament-turn 9s ease-in-out infinite reverse;
+  animation: ornament-turn var(--background-duration-9s) ease-in-out infinite
+    reverse;
 }
 
 .background-effects__ornament--six {
   top: 72%;
   left: 42%;
-  animation: ornament-bounce 10s ease-in-out infinite;
+  animation: ornament-bounce var(--background-duration-10s) ease-in-out infinite;
 }
 
 .background-effects__ornament--seven {
   top: 35%;
   left: 62%;
-  animation: ornament-float 4s ease-in-out infinite reverse;
+  animation: ornament-float var(--background-duration-4s) ease-in-out infinite
+    reverse;
 }
 
 .background-effects__ornament--eight {
   right: 17%;
   bottom: 12%;
-  animation: ornament-slide 3s ease-in-out infinite reverse;
+  animation: ornament-slide var(--background-duration-3s) ease-in-out infinite
+    reverse;
 }
 
 .background-effects__ornament--nine {
   top: 18%;
   left: 48%;
-  animation: ornament-bounce 4s ease-in-out infinite reverse;
+  animation: ornament-bounce var(--background-duration-4s) ease-in-out infinite
+    reverse;
 }
 
 .background-effects__ornament--ten {
   right: 35%;
   bottom: 25%;
-  animation: ornament-turn 5s ease-in-out infinite;
+  animation: ornament-turn var(--background-duration-5s) ease-in-out infinite;
 }
 
 .background-effects__ornament--eleven {
   top: 53%;
   left: 36%;
-  animation: ornament-slide 4s ease-in-out infinite;
+  animation: ornament-slide var(--background-duration-4s) ease-in-out infinite;
 }
 
 .background-effects__cursor-glow {

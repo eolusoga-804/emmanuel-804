@@ -323,4 +323,7 @@ export type PortfolioContent = {
     backToTopLabelTemplate: string;
     backToTopThresholdPercent: number;
   };
+  backgroundEffects: {
+    ornamentSymbols: string[];
+  };
 };

@@ -688,4 +688,8 @@ export const portfolioContent = {
     backToTopLabelTemplate: "Back to top, {progress}% scrolled",
     backToTopThresholdPercent: 0.5,
   },
+
+  backgroundEffects: {
+    ornamentSymbols: ["✦", "◇", "⌘", "⬡", "△", "✧", "◉", "↗", "⌁", "⬟", "▦"],
+  },
 } satisfies PortfolioContent;
