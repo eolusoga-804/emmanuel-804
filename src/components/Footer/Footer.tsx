@@ -30,7 +30,7 @@ export default function Footer() {
   const phoneHref = contact.phone.replace(/[^\d+]/g, "");
   const secondaryPhoneHref = contact.secondaryPhone.replace(/[^\d+]/g, "");
   const whatsappHref = `${contact.whatsappUrl}?text=${encodeURIComponent(
-    "Hi Emmanuel, I’d like to discuss a project.",
+    footer.whatsappMessage,
   )}`;
 
   useEffect(() => {
@@ -60,8 +60,8 @@ export default function Footer() {
             <a
               className={styles["footer__icon-link"]}
               href={`mailto:${contact.email}`}
-              aria-label="Email Emmanuel"
-              title="Email Emmanuel"
+              aria-label={footer.emailLabel}
+              title={footer.emailLabel}
             >
               <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
             </a>
@@ -69,8 +69,8 @@ export default function Footer() {
             <a
               className={styles["footer__icon-link"]}
               href={`tel:${phoneHref}`}
-              aria-label={`Call Emmanuel at ${contact.phone}`}
-              title={`Call ${contact.phone}`}
+              aria-label={footer.phoneLabel.replace("{phone}", contact.phone)}
+              title={footer.phoneLabel.replace("{phone}", contact.phone)}
             >
               <FontAwesomeIcon icon={faPhone} aria-hidden="true" />
             </a>
@@ -78,8 +78,14 @@ export default function Footer() {
             <a
               className={styles["footer__icon-link"]}
               href={`tel:${secondaryPhoneHref}`}
-              aria-label={`Call Emmanuel at ${contact.secondaryPhone}`}
-              title={`Call ${contact.secondaryPhone}`}
+              aria-label={footer.phoneLabel.replace(
+                "{phone}",
+                contact.secondaryPhone,
+              )}
+              title={footer.phoneLabel.replace(
+                "{phone}",
+                contact.secondaryPhone,
+              )}
             >
               <FontAwesomeIcon icon={faPhone} aria-hidden="true" />
             </a>
@@ -89,8 +95,8 @@ export default function Footer() {
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Message Emmanuel on WhatsApp"
-              title="WhatsApp"
+              aria-label={footer.whatsappLabel}
+              title={footer.whatsappTitle}
             >
               <FontAwesomeIcon icon={faWhatsapp} aria-hidden="true" />
             </a>
@@ -100,8 +106,8 @@ export default function Footer() {
               href={portfolioContent.resumePath}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Open résumé PDF in a new tab"
-              title="Open résumé"
+              aria-label={footer.resumeLabel}
+              title={footer.resumeTitle}
             >
               <FontAwesomeIcon icon={faFilePdf} aria-hidden="true" />
             </a>

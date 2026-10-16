@@ -456,6 +456,16 @@ export const portfolioContent = {
       "Frontend and React.js development shaped by work in UI/UX and graphic design, supported by an analytical foundation in Industrial Mathematics. I bring structure, visual care, and a steady focus on responsive, accessible experiences—from the first sketch through the details that make a product feel complete.",
     termsLabel: "Terms and Conditions",
     privacyLabel: "Privacy Policy",
+    contactLabel: "Contact",
+    socialsLabel: "Social profiles",
+    legalLabel: "Legal information",
+    emailLabel: "Email Emmanuel",
+    phoneLabel: "Call Emmanuel at {phone}",
+    whatsappLabel: "Message Emmanuel on WhatsApp",
+    whatsappTitle: "WhatsApp",
+    resumeLabel: "Open résumé PDF in a new tab",
+    resumeTitle: "Open résumé",
+    whatsappMessage: "Hi Emmanuel, I’d like to discuss a project.",
   },
 
   loadingScreen: {

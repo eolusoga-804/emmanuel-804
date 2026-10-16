@@ -127,6 +127,16 @@ export type PortfolioContent = {
     message: string;
     termsLabel: string;
     privacyLabel: string;
+    contactLabel: string;
+    socialsLabel: string;
+    legalLabel: string;
+    emailLabel: string;
+    phoneLabel: string;
+    whatsappLabel: string;
+    whatsappTitle: string;
+    resumeLabel: string;
+    resumeTitle: string;
+    whatsappMessage: string;
   };
   loadingScreen: {
     minimumDurationMs: number;
