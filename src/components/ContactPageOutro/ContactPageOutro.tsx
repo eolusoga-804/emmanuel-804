@@ -3,10 +3,14 @@ import styles from "./ContactPageOutro.module.css";
 
 export default function ContactPageOutro() {
   const { contactOutro, contact } = portfolioContent;
-  const subject = encodeURIComponent("Let's build something together");
+  const subject = encodeURIComponent(contactOutro.emailSubject);
 
   return (
-    <section className={styles.outro} data-section-spacing="contact-outro" aria-labelledby="contact-outro-title">
+    <section
+      className={styles.outro}
+      data-section-spacing="contact-outro"
+      aria-labelledby="contact-outro-title"
+    >
       <div className={styles["outro__panel"]}>
         <span className={styles["outro__spark"]} aria-hidden="true">
           ✳

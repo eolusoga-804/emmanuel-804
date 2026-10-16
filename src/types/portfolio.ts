@@ -122,6 +122,7 @@ export type PortfolioContent = {
     title: string;
     message: string;
     actionLabel: string;
+    emailSubject: string;
   };
   footer: {
     message: string;
