@@ -450,4 +450,11 @@ export const portfolioContent = {
       "Big plans, tiny details, or a “what if?”—let’s start with a conversation.",
     actionLabel: "Send the first hello",
   },
+
+  footer: {
+    message:
+      "Frontend and React.js development shaped by work in UI/UX and graphic design, supported by an analytical foundation in Industrial Mathematics. I bring structure, visual care, and a steady focus on responsive, accessible experiences—from the first sketch through the details that make a product feel complete.",
+    termsLabel: "Terms and Conditions",
+    privacyLabel: "Privacy Policy",
+  },
 } satisfies PortfolioContent;

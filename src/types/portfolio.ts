@@ -123,4 +123,9 @@ export type PortfolioContent = {
     message: string;
     actionLabel: string;
   };
+  footer: {
+    message: string;
+    termsLabel: string;
+    privacyLabel: string;
+  };
 };
