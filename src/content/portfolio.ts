@@ -622,4 +622,10 @@ export const portfolioContent = {
     introTemplate:
       "A {count}-step process, from understanding requirements to reviewing and improving the finished work.",
   },
+
+  statisticsSection: {
+    eyebrow: "At a glance",
+    title: "By the numbers",
+    numberLocale: "en",
+  },
 } satisfies PortfolioContent;

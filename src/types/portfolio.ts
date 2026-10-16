@@ -266,4 +266,9 @@ export type PortfolioContent = {
     title: string;
     introTemplate: string;
   };
+  statisticsSection: {
+    eyebrow: string;
+    title: string;
+    numberLocale: string;
+  };
 };

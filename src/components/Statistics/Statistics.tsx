@@ -20,9 +20,11 @@ export default function Statistics() {
           data-aos="zoom-in"
           suppressHydrationWarning
         >
-          <p className={styles["statistics__eyebrow"]}>At a glance</p>
+          <p className={styles["statistics__eyebrow"]}>
+            {portfolioContent.statisticsSection.eyebrow}
+          </p>
           <h2 className={styles["statistics__title"]} id="statistics-title">
-            By the numbers
+            {portfolioContent.statisticsSection.title}
           </h2>
         </header>
 
@@ -30,7 +32,9 @@ export default function Statistics() {
           {statistics.map((statistic) => (
             <li className={styles["statistics__card"]} key={statistic.label}>
               <strong className={styles["statistics__value"]}>
-                {new Intl.NumberFormat("en").format(statistic.value)}
+                {new Intl.NumberFormat(
+                  portfolioContent.statisticsSection.numberLocale,
+                ).format(statistic.value)}
               </strong>
               <h3 className={styles["statistics__label"]}>{statistic.label}</h3>
               <p className={styles["statistics__context"]}>
