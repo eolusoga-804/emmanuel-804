@@ -189,4 +189,21 @@ export type PortfolioContent = {
       whatsappMessage: string;
     };
   };
+  hero: {
+    availabilityPrefix: string;
+    roleLead: string;
+    contactAction: string;
+    resumePreviewAction: string;
+    projectsAction: string;
+    cvLabel: string;
+    openResumeLabel: string;
+    downloadResumeLabel: string;
+    closeResumeLabel: string;
+    cvFrameTitlePrefix: string;
+    typingDelays: {
+      deleteCharacterMs: number;
+      completedTitleMs: number;
+      typeCharacterMs: number;
+    };
+  };
 };

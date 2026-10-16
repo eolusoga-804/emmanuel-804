@@ -32,7 +32,12 @@ export default function Hero() {
     }
 
     const isTitleComplete = visibleCharacters === currentTitle.length;
-    const delay = isDeleting ? 45 : isTitleComplete ? 1300 : 85;
+    const { typingDelays } = portfolioContent.hero;
+    const delay = isDeleting
+      ? typingDelays.deleteCharacterMs
+      : isTitleComplete
+        ? typingDelays.completedTitleMs
+        : typingDelays.typeCharacterMs;
 
     const timeoutId = window.setTimeout(() => {
       if (isTitleComplete && !isDeleting) {
@@ -59,15 +64,18 @@ export default function Hero() {
             className={styles["hero__availability-dot"]}
             aria-hidden="true"
           />
-          Available for {portfolioContent.identity.availability.join(" · ")}
+          {portfolioContent.hero.availabilityPrefix}{" "}
+          {portfolioContent.identity.availability.join(" · ")}
         </p>
 
         <h1 className={styles["hero__title"]} id="hero-title">
-          I’m {portfolioContent.identity.fullName}
+          {portfolioContent.hero.roleLead} {portfolioContent.identity.fullName}
         </h1>
 
         <p className={styles["hero__role"]}>
-          <span className={styles["hero__role-label"]}>I work as a </span>
+          <span className={styles["hero__role-label"]}>
+            {portfolioContent.hero.roleLead}{" "}
+          </span>
           <span aria-label={portfolioContent.identity.primaryTitle}>
             <span aria-hidden="true">{visibleTitle}</span>
             <span className={styles["hero__caret"]} aria-hidden="true">
@@ -82,7 +90,7 @@ export default function Hero() {
 
         <div className={styles["hero__actions"]}>
           <a className={styles["hero__button--primary"]} href="#contact">
-            Contact Me
+            {portfolioContent.hero.contactAction}
           </a>
 
           <div className={styles["hero__cv-action"]}>
@@ -91,12 +99,12 @@ export default function Hero() {
               type="button"
               onClick={() => resumeDialogRef.current?.showModal()}
             >
-              Preview CV
+              {portfolioContent.hero.resumePreviewAction}
             </button>
           </div>
 
           <a className={styles["hero__button--secondary"]} href="#projects">
-            View Projects
+            {portfolioContent.hero.projectsAction}
           </a>
         </div>
 
@@ -107,7 +115,9 @@ export default function Hero() {
         >
           <header className={styles["hero__cv-header"]}>
             <div>
-              <p className={styles["hero__cv-label"]}>Curriculum Vitae</p>
+              <p className={styles["hero__cv-label"]}>
+                {portfolioContent.hero.cvLabel}
+              </p>
               <h2 className={styles["hero__cv-title"]} id="hero-cv-title">
                 {portfolioContent.identity.fullName}
               </h2>
@@ -120,7 +130,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Open in new tab
+                {portfolioContent.hero.openResumeLabel}
               </a>
 
               <a
@@ -128,7 +138,7 @@ export default function Hero() {
                 href={portfolioContent.resumePath}
                 download
               >
-                Download PDF
+                {portfolioContent.hero.downloadResumeLabel}
               </a>
 
               <button
@@ -137,14 +147,14 @@ export default function Hero() {
                 aria-label="Close CV preview"
                 onClick={() => resumeDialogRef.current?.close()}
               >
-                Close
+                {portfolioContent.hero.closeResumeLabel}
               </button>
             </div>
           </header>
 
           <iframe
             className={styles["hero__cv-frame"]}
-            title={`CV preview for ${portfolioContent.identity.fullName}`}
+            title={`{portfolioContent.hero.cvFrameTitlePrefix} ${portfolioContent.identity.fullName}`}
             src={portfolioContent.resumePath}
           />
         </dialog>

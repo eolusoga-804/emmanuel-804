@@ -532,4 +532,22 @@ export const portfolioContent = {
       whatsappMessage: "Hi Emmanuel, I’d like to discuss a project.",
     },
   },
+
+  hero: {
+    availabilityPrefix: "Available for",
+    roleLead: "I work as a ",
+    contactAction: "Contact Me",
+    resumePreviewAction: "Preview CV",
+    projectsAction: "View Projects",
+    cvLabel: "Curriculum Vitae",
+    openResumeLabel: "Open in new tab",
+    downloadResumeLabel: "Download PDF",
+    closeResumeLabel: "Close",
+    cvFrameTitlePrefix: "CV preview for",
+    typingDelays: {
+      deleteCharacterMs: 45,
+      completedTitleMs: 1300,
+      typeCharacterMs: 85,
+    },
+  },
 } satisfies PortfolioContent;
