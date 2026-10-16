@@ -2,6 +2,7 @@ import Script from "next/script";
 import { portfolioContent } from "@/content/portfolio";
 import { createPageMetadata } from "@/content/metadata";
 import { Inter, Poppins } from "next/font/google";
+import LoadingScreen from "@/components/LoadingScreen/LoadingScreen";
 import BackgroundEffects from "@/components/BackgroundEffects/BackgroundEffects";
 import FloatingControls from "@/components/FloatingControls/FloatingControls";
 import SiteNavigation from "@/components/SiteNavigation/SiteNavigation";
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
           }}
         />
+        <LoadingScreen />
         <AOSProvider />
         <div className="site-shell">
           <BackgroundEffects />
