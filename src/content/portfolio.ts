@@ -598,4 +598,13 @@ export const portfolioContent = {
     requestPortfolioLabel: "Request the full portfolio",
     portfolioRequestMessage: "Hi Emmanuel, please share your full portfolio.",
   },
+
+  whyWorkSection: {
+    eyebrow: "Working together",
+    title: "Why Work With Me",
+    intro:
+      "A mix of analytical thinking, design experience, and a focus on useful digital experiences.",
+    numberDigits: 2,
+    accordionName: "why-work-items",
+  },
 } satisfies PortfolioContent;

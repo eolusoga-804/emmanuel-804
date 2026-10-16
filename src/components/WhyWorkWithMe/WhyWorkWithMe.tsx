@@ -15,13 +15,14 @@ export default function WhyWorkWithMe() {
           data-aos="zoom-in"
           suppressHydrationWarning
         >
-          <p className={styles["why-work__eyebrow"]}>Working together</p>
+          <p className={styles["why-work__eyebrow"]}>
+            {portfolioContent.whyWorkSection.eyebrow}
+          </p>
           <h2 className={styles["why-work__title"]} id="why-work-title">
-            Why Work With Me
+            {portfolioContent.whyWorkSection.title}
           </h2>
           <p className={styles["why-work__intro"]}>
-            A mix of analytical thinking, design experience, and a focus on
-            useful digital experiences.
+            {portfolioContent.whyWorkSection.intro}
           </p>
         </header>
 
@@ -30,11 +31,14 @@ export default function WhyWorkWithMe() {
             <details
               className={styles["why-work__card"]}
               key={strength.title}
-              name="why-work-items"
+              name={portfolioContent.whyWorkSection.accordionName}
             >
               <summary className={styles["why-work__summary"]}>
                 <span className={styles["why-work__number"]} aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
+                  {String(index + 1).padStart(
+                    portfolioContent.whyWorkSection.numberDigits,
+                    "0",
+                  )}
                 </span>
 
                 <span className={styles["why-work__card-title"]}>

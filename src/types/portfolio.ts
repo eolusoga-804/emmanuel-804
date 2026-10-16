@@ -248,4 +248,11 @@ export type PortfolioContent = {
     requestPortfolioLabel: string;
     portfolioRequestMessage: string;
   };
+  whyWorkSection: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    numberDigits: number;
+    accordionName: string;
+  };
 };
