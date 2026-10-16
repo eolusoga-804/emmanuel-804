@@ -15,13 +15,14 @@ export default function DevelopmentPhilosophy() {
           data-aos="zoom-in"
           suppressHydrationWarning
         >
-          <p className={styles["philosophy__eyebrow"]}>How I work</p>
+          <p className={styles["philosophy__eyebrow"]}>
+            {portfolioContent.philosophySection.eyebrow}
+          </p>
           <h2 className={styles["philosophy__title"]} id="philosophy-title">
-            Development Philosophy
+            {portfolioContent.philosophySection.title}
           </h2>
           <p className={styles["philosophy__intro"]}>
-            Purpose, clarity, accessibility, maintainability, and quality guide
-            my approach to digital work.
+            {portfolioContent.philosophySection.intro}
           </p>
         </header>
 
@@ -29,7 +30,10 @@ export default function DevelopmentPhilosophy() {
           {portfolioContent.philosophy.map((principle, index) => (
             <li className={styles["philosophy__item"]} key={principle.title}>
               <span className={styles["philosophy__number"]} aria-hidden="true">
-                {String(index + 1).padStart(2, "0")}
+                {String(index + 1).padStart(
+                  portfolioContent.philosophySection.numberDigits,
+                  "0",
+                )}
               </span>
 
               <div>

@@ -255,4 +255,10 @@ export type PortfolioContent = {
     numberDigits: number;
     accordionName: string;
   };
+  philosophySection: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    numberDigits: number;
+  };
 };

@@ -607,4 +607,12 @@ export const portfolioContent = {
     numberDigits: 2,
     accordionName: "why-work-items",
   },
+
+  philosophySection: {
+    eyebrow: "How I work",
+    title: "Development Philosophy",
+    intro:
+      "Purpose, clarity, accessibility, maintainability, and quality guide my approach to digital work.",
+    numberDigits: 2,
+  },
 } satisfies PortfolioContent;
