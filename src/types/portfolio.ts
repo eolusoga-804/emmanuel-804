@@ -261,4 +261,9 @@ export type PortfolioContent = {
     intro: string;
     numberDigits: number;
   };
+  workflowSection: {
+    eyebrow: string;
+    title: string;
+    introTemplate: string;
+  };
 };

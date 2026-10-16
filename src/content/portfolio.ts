@@ -615,4 +615,11 @@ export const portfolioContent = {
       "Purpose, clarity, accessibility, maintainability, and quality guide my approach to digital work.",
     numberDigits: 2,
   },
+
+  workflowSection: {
+    eyebrow: "From brief to delivery",
+    title: "Workflow",
+    introTemplate:
+      "A {count}-step process, from understanding requirements to reviewing and improving the finished work.",
+  },
 } satisfies PortfolioContent;

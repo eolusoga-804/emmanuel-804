@@ -15,13 +15,17 @@ export default function Workflow() {
           data-aos="zoom-in"
           suppressHydrationWarning
         >
-          <p className={styles["workflow__eyebrow"]}>From brief to delivery</p>
+          <p className={styles["workflow__eyebrow"]}>
+            {portfolioContent.workflowSection.eyebrow}
+          </p>
           <h2 className={styles["workflow__title"]} id="workflow-title">
-            Workflow
+            {portfolioContent.workflowSection.title}
           </h2>
           <p className={styles["workflow__intro"]}>
-            A six-step process, from understanding requirements to reviewing and
-            improving the finished work.
+            {portfolioContent.workflowSection.introTemplate.replace(
+              "{count}",
+              String(portfolioContent.workflow.length),
+            )}
           </p>
         </header>
 
