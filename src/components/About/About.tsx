@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { portfolioContent } from "@/content/portfolio";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import styles from "./About.module.css";
 
 // Build the carousel from centralized portfolio content.
@@ -113,7 +115,7 @@ export default function About() {
                 aria-label="Previous About slide"
                 onClick={showPreviousSlide}
               >
-                <span aria-hidden="true">←</span>
+                <FontAwesomeIcon icon={faArrowLeft} aria-hidden="true" />
               </button>
 
               <div
@@ -143,7 +145,7 @@ export default function About() {
                 aria-label="Next About slide"
                 onClick={showNextSlide}
               >
-                <span aria-hidden="true">→</span>
+                <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
               </button>
             </div>
           </div>
