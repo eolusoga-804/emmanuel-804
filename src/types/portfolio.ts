@@ -231,4 +231,21 @@ export type PortfolioContent = {
     intro: string;
     numberDigits: number;
   };
+  projectsSection: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    previewUnavailableLabel: string;
+    featuredLabel: string;
+    verificationLabel: string;
+    technologyUnavailableLabel: string;
+    caseStudyLabel: string;
+    liveProjectLabel: string;
+    sourceCodeLabel: string;
+    linksUnavailableLabel: string;
+    footerPrompt: string;
+    openShowcaseLabel: string;
+    requestPortfolioLabel: string;
+    portfolioRequestMessage: string;
+  };
 };

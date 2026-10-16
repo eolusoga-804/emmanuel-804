@@ -4,7 +4,7 @@ import styles from "./Projects.module.css";
 
 const portfolioRequestUrl = `${
   portfolioContent.contact.whatsappUrl
-}?text=${encodeURIComponent("Hi Emmanuel, please share your full portfolio.")}`;
+}?text=${encodeURIComponent(`${portfolioContent.projectsSection.portfolioRequestMessage}`)}`;
 
 export default function Projects() {
   return (
@@ -20,12 +20,14 @@ export default function Projects() {
           data-aos="zoom-in"
           suppressHydrationWarning
         >
-          <p className={styles["projects__eyebrow"]}>Selected work</p>
+          <p className={styles["projects__eyebrow"]}>
+            {portfolioContent.projectsSection.eyebrow}
+          </p>
           <h2 className={styles["projects__title"]} id="projects-title">
-            Projects
+            {portfolioContent.projectsSection.title}
           </h2>
           <p className={styles["projects__intro"]}>
-            A selection of projects from my portfolio.
+            {portfolioContent.projectsSection.intro}
           </p>
         </header>
 
@@ -47,16 +49,18 @@ export default function Projects() {
               </div>
 
               <p className={styles["projects__preview-note"]}>
-                Visual preview not supplied
+                {portfolioContent.projectsSection.previewUnavailableLabel}
               </p>
 
               <div className={styles["projects__badges"]}>
                 {project.favorite && (
-                  <span className={styles["projects__badge"]}>Featured</span>
+                  <span className={styles["projects__badge"]}>
+                    {portfolioContent.projectsSection.featuredLabel}
+                  </span>
                 )}
                 {project.verificationNeeded && (
                   <span className={styles["projects__badge"]}>
-                    Details to confirm
+                    {portfolioContent.projectsSection.verificationLabel}
                   </span>
                 )}
               </div>
@@ -78,7 +82,10 @@ export default function Projects() {
                   ))
                 ) : (
                   <span className={styles["projects__placeholder"]}>
-                    Technology details not provided
+                    {
+                      portfolioContent.projectsSection
+                        .technologyUnavailableLabel
+                    }
                   </span>
                 )}
               </div>
@@ -90,7 +97,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Case study
+                    {portfolioContent.projectsSection.caseStudyLabel}
                   </a>
                 )}
                 {project.liveUrl && (
@@ -99,7 +106,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Live project
+                    {portfolioContent.projectsSection.liveProjectLabel}
                   </a>
                 )}
                 {project.githubUrl && (
@@ -108,14 +115,14 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Source code
+                    {portfolioContent.projectsSection.sourceCodeLabel}
                   </a>
                 )}
                 {!project.caseStudyUrl &&
                   !project.liveUrl &&
                   !project.githubUrl && (
                     <span className={styles["projects__placeholder"]}>
-                      Project links not provided
+                      {portfolioContent.projectsSection.linksUnavailableLabel}
                     </span>
                   )}
               </div>
@@ -124,9 +131,9 @@ export default function Projects() {
         </div>
 
         <footer className={styles["projects__footer"]}>
-          <p>Would you like to see more work?</p>
+          <p>{portfolioContent.projectsSection.footerPrompt}</p>
           <Link className={styles["projects__portfolio-link"]} href="/projects">
-            Open project showcase
+            {portfolioContent.projectsSection.openShowcaseLabel}
           </Link>
           <a
             className={styles["projects__portfolio-link"]}
@@ -134,7 +141,7 @@ export default function Projects() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Request the full portfolio
+            {portfolioContent.projectsSection.requestPortfolioLabel}
           </a>
         </footer>
       </div>

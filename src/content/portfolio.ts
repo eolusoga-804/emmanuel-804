@@ -580,4 +580,22 @@ export const portfolioContent = {
       "Support across frontend development, user experience, and visual design.",
     numberDigits: 2,
   },
+
+  projectsSection: {
+    eyebrow: "Selected work",
+    title: "Projects",
+    intro: "A selection of projects from my portfolio.",
+    previewUnavailableLabel: "Visual preview not supplied",
+    featuredLabel: "Featured",
+    verificationLabel: "Details to confirm",
+    technologyUnavailableLabel: "Technology details not provided",
+    caseStudyLabel: "Case study",
+    liveProjectLabel: "Live project",
+    sourceCodeLabel: "Source code",
+    linksUnavailableLabel: "Project links not provided",
+    footerPrompt: "Would you like to see more work?",
+    openShowcaseLabel: "Open project showcase",
+    requestPortfolioLabel: "Request the full portfolio",
+    portfolioRequestMessage: "Hi Emmanuel, please share your full portfolio.",
+  },
 } satisfies PortfolioContent;
