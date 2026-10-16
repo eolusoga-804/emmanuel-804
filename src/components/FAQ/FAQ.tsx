@@ -15,12 +15,14 @@ export default function FAQ() {
           data-aos="zoom-in"
           suppressHydrationWarning
         >
-          <p className={styles["faq__eyebrow"]}>Questions</p>
+          <p className={styles["faq__eyebrow"]}>
+            {portfolioContent.faqSection.eyebrow}
+          </p>
           <h2 className={styles["faq__title"]} id="faq-title">
-            Frequently Asked Questions
+            {portfolioContent.faqSection.title}
           </h2>
           <p className={styles["faq__intro"]}>
-            Details about my services, availability, and portfolio.
+            {portfolioContent.faqSection.intro}
           </p>
         </header>
 
@@ -29,7 +31,7 @@ export default function FAQ() {
             <details
               className={styles["faq__item"]}
               key={item.question}
-              name="faq-items"
+              name={portfolioContent.faqSection.accordionName}
             >
               <summary className={styles["faq__question"]}>
                 <span>{item.question}</span>

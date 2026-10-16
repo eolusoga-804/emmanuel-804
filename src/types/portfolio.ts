@@ -292,4 +292,10 @@ export type PortfolioContent = {
     slidePositionTemplate: string;
     portraitAltTemplate: string;
   };
+  faqSection: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    accordionName: string;
+  };
 };

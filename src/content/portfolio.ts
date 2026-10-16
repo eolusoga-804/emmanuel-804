@@ -653,4 +653,11 @@ export const portfolioContent = {
     slidePositionTemplate: "{current} of {total}",
     portraitAltTemplate: "Portrait of {author}",
   },
+
+  faqSection: {
+    eyebrow: "Questions",
+    title: "Frequently Asked Questions",
+    intro: "Details about my services, availability, and portfolio.",
+    accordionName: "faq-items",
+  },
 } satisfies PortfolioContent;
