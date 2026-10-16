@@ -206,4 +206,18 @@ export type PortfolioContent = {
       typeCharacterMs: number;
     };
   };
+  aboutSection: {
+    eyebrow: string;
+    title: string;
+    carouselLabel: string;
+    slidePositionLabel: string;
+    previousSlideLabel: string;
+    nextSlideLabel: string;
+    indicatorGroupLabel: string;
+    indicatorLabel: string;
+    experienceSlideTitle: string;
+    educationSlideTitle: string;
+    certificatesLanguagesSlideTitle: string;
+    languageListPrefix: string;
+  };
 };

@@ -550,4 +550,19 @@ export const portfolioContent = {
       typeCharacterMs: 85,
     },
   },
+
+  aboutSection: {
+    eyebrow: "About Me",
+    title: "Design thinking meets frontend development.",
+    carouselLabel: "About Emmanuel",
+    slidePositionLabel: "{current} of {total}: {title}",
+    previousSlideLabel: "Previous slide",
+    nextSlideLabel: "Next About slide",
+    indicatorGroupLabel: "Choose an About slide",
+    indicatorLabel: "Show {title}",
+    experienceSlideTitle: "Experience",
+    educationSlideTitle: "Education",
+    certificatesLanguagesSlideTitle: "Certificates and Languages",
+    languageListPrefix: "Languages:",
+  },
 } satisfies PortfolioContent;

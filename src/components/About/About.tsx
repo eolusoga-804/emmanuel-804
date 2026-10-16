@@ -11,7 +11,7 @@ import styles from "./About.module.css";
 const slides = [
   ...portfolioContent.aboutSlides,
   {
-    title: "Experience",
+    title: `${portfolioContent.aboutSection.experienceSlideTitle}`,
     body: portfolioContent.experience
       .map(
         ({ period, title, organization, description }) =>
@@ -20,7 +20,7 @@ const slides = [
       .join("\n\n"),
   },
   {
-    title: "Education",
+    title: `${portfolioContent.aboutSection.educationSlideTitle}`,
     body: portfolioContent.education
       .map(
         ({ period, title, organization, description }) =>
@@ -29,10 +29,10 @@ const slides = [
       .join("\n\n"),
   },
   {
-    title: "Certificates and Languages",
+    title: `${portfolioContent.aboutSection.certificatesLanguagesSlideTitle}`,
     body: [
       ...portfolioContent.certificates.map((certificate) => `• ${certificate}`),
-      `Languages: ${portfolioContent.languages.join(" · ")}`,
+      `${portfolioContent.aboutSection.languageListPrefix} ${portfolioContent.languages.join(" · ")}`,
     ].join("\n"),
   },
 ];
@@ -79,22 +79,27 @@ export default function About() {
         </figure>
 
         <div className={styles["about__content"]}>
-          <p className={styles["about__eyebrow"]}>About Me</p>
+          <p className={styles["about__eyebrow"]}>
+            {portfolioContent.aboutSection.eyebrow}
+          </p>
           <h2 className={styles["about__title"]} id="about-title">
-            Design thinking meets frontend development.
+            {portfolioContent.aboutSection.title}
           </h2>
 
           <div
             className={styles["about__carousel"]}
             role="region"
             aria-roledescription="carousel"
-            aria-label="About Emmanuel"
+            aria-label={portfolioContent.aboutSection.carouselLabel}
           >
             <article
               className={styles["about__slide"]}
               role="group"
               aria-roledescription="slide"
-              aria-label={`${activeIndex + 1} of ${slides.length}: ${activeSlide.title}`}
+              aria-label={`${portfolioContent.aboutSection.slidePositionLabel
+                .replace("{current}", String(activeIndex + 1))
+                .replace("{total}", String(slides.length))
+                .replace("{title}", activeSlide.title)}`}
               aria-live="polite"
             >
               <span className={styles["about__slide-count"]}>
@@ -112,7 +117,7 @@ export default function About() {
               <button
                 className={styles["about__arrow"]}
                 type="button"
-                aria-label="Previous About slide"
+                aria-label={portfolioContent.aboutSection.previousSlideLabel}
                 onClick={showPreviousSlide}
               >
                 <FontAwesomeIcon icon={faArrowLeft} aria-hidden="true" />
@@ -121,7 +126,7 @@ export default function About() {
               <div
                 className={styles["about__indicators"]}
                 role="group"
-                aria-label="Choose an About slide"
+                aria-label={portfolioContent.aboutSection.indicatorGroupLabel}
               >
                 {slides.map((slide, index) => (
                   <button
@@ -132,7 +137,10 @@ export default function About() {
                         : ""
                     }`}
                     type="button"
-                    aria-label={`Show ${slide.title}`}
+                    aria-label={portfolioContent.aboutSection.indicatorLabel.replace(
+                      "{title}",
+                      slide.title,
+                    )}
                     aria-pressed={index === activeIndex}
                     onClick={() => setActiveIndex(index)}
                   />
@@ -142,7 +150,7 @@ export default function About() {
               <button
                 className={styles["about__arrow"]}
                 type="button"
-                aria-label="Next About slide"
+                aria-label={portfolioContent.aboutSection.nextSlideLabel}
                 onClick={showNextSlide}
               >
                 <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
